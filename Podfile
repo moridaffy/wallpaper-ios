@@ -7,5 +7,8 @@ use_frameworks!
 
   # Pods for wallpaperapp
 pod 'RxSwift'
+pod 'RxDataSources'
 pod 'SnapKit'
+pod 'Alamofire'
+pod 'Kingfisher'
 end
