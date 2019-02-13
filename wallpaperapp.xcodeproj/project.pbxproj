@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0C8010352214130300CB4AD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8010342214130300CB4AD2 /* AppDelegate.swift */; };
+		0C8010372214130300CB4AD2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8010362214130300CB4AD2 /* ViewController.swift */; };
+		0C80103A2214130300CB4AD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C8010382214130300CB4AD2 /* Main.storyboard */; };
+		0C80103C2214130500CB4AD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C80103B2214130500CB4AD2 /* Assets.xcassets */; };
+		0C80103F2214130500CB4AD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C80103D2214130500CB4AD2 /* LaunchScreen.storyboard */; };
+		983B90EED50D0857D8C0AD92 /* Pods_wallpaperapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 755D933F349575DFAF442398 /* Pods_wallpaperapp.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0C8010312214130300CB4AD2 /* wallpaperapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wallpaperapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C8010342214130300CB4AD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0C8010362214130300CB4AD2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0C8010392214130300CB4AD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0C80103B2214130500CB4AD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0C80103E2214130500CB4AD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0C8010402214130500CB4AD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		755D933F349575DFAF442398 /* Pods_wallpaperapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wallpaperapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		92A344CE975F32BBAEC96DE3 /* Pods-wallpaperapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wallpaperapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-wallpaperapp/Pods-wallpaperapp.release.xcconfig"; sourceTree = "<group>"; };
+		C41D526A99862C7F0EC235AC /* Pods-wallpaperapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wallpaperapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wallpaperapp/Pods-wallpaperapp.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0C80102E2214130300CB4AD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				983B90EED50D0857D8C0AD92 /* Pods_wallpaperapp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0C8010282214130300CB4AD2 = {
+			isa = PBXGroup;
+			children = (
+				0C8010332214130300CB4AD2 /* wallpaperapp */,
+				0C8010322214130300CB4AD2 /* Products */,
+				43BFE3AEDD85FC25F318B5A2 /* Pods */,
+				E36B1FEA26F1482821DE00B2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0C8010322214130300CB4AD2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0C8010312214130300CB4AD2 /* wallpaperapp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0C8010332214130300CB4AD2 /* wallpaperapp */ = {
+			isa = PBXGroup;
+			children = (
+				0C8010342214130300CB4AD2 /* AppDelegate.swift */,
+				0C8010362214130300CB4AD2 /* ViewController.swift */,
+				0C8010382214130300CB4AD2 /* Main.storyboard */,
+				0C80103B2214130500CB4AD2 /* Assets.xcassets */,
+				0C80103D2214130500CB4AD2 /* LaunchScreen.storyboard */,
+				0C8010402214130500CB4AD2 /* Info.plist */,
+			);
+			path = wallpaperapp;
+			sourceTree = "<group>";
+		};
+		43BFE3AEDD85FC25F318B5A2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C41D526A99862C7F0EC235AC /* Pods-wallpaperapp.debug.xcconfig */,
+				92A344CE975F32BBAEC96DE3 /* Pods-wallpaperapp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E36B1FEA26F1482821DE00B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				755D933F349575DFAF442398 /* Pods_wallpaperapp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0C8010302214130300CB4AD2 /* wallpaperapp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C8010432214130500CB4AD2 /* Build configuration list for PBXNativeTarget "wallpaperapp" */;
+			buildPhases = (
+				98FFD8124C11E47EA343CED6 /* [CP] Check Pods Manifest.lock */,
+				0C80102D2214130300CB4AD2 /* Sources */,
+				0C80102E2214130300CB4AD2 /* Frameworks */,
+				0C80102F2214130300CB4AD2 /* Resources */,
+				697CBA0F07942DA8EFFEB907 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = wallpaperapp;
+			productName = wallpaperapp;
+			productReference = 0C8010312214130300CB4AD2 /* wallpaperapp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0C8010292214130300CB4AD2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = MSKR;
+				TargetAttributes = {
+					0C8010302214130300CB4AD2 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 0C80102C2214130300CB4AD2 /* Build configuration list for PBXProject "wallpaperapp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0C8010282214130300CB4AD2;
+			productRefGroup = 0C8010322214130300CB4AD2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0C8010302214130300CB4AD2 /* wallpaperapp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0C80102F2214130300CB4AD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C80103F2214130500CB4AD2 /* LaunchScreen.storyboard in Resources */,
+				0C80103C2214130500CB4AD2 /* Assets.xcassets in Resources */,
+				0C80103A2214130300CB4AD2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		697CBA0F07942DA8EFFEB907 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-wallpaperapp/Pods-wallpaperapp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-wallpaperapp/Pods-wallpaperapp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98FFD8124C11E47EA343CED6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-wallpaperapp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0C80102D2214130300CB4AD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C8010372214130300CB4AD2 /* ViewController.swift in Sources */,
+				0C8010352214130300CB4AD2 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0C8010382214130300CB4AD2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0C8010392214130300CB4AD2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0C80103D2214130500CB4AD2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0C80103E2214130500CB4AD2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0C8010412214130500CB4AD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0C8010422214130500CB4AD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0C8010442214130500CB4AD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C41D526A99862C7F0EC235AC /* Pods-wallpaperapp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GCD2MCUEP4;
+				INFOPLIST_FILE = wallpaperapp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.mskr.wallpaperapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0C8010452214130500CB4AD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92A344CE975F32BBAEC96DE3 /* Pods-wallpaperapp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GCD2MCUEP4;
+				INFOPLIST_FILE = wallpaperapp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.mskr.wallpaperapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0C80102C2214130300CB4AD2 /* Build configuration list for PBXProject "wallpaperapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C8010412214130500CB4AD2 /* Debug */,
+				0C8010422214130500CB4AD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0C8010432214130500CB4AD2 /* Build configuration list for PBXNativeTarget "wallpaperapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C8010442214130500CB4AD2 /* Debug */,
+				0C8010452214130500CB4AD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0C8010292214130300CB4AD2 /* Project object */;
+}
