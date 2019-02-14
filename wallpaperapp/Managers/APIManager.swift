@@ -14,7 +14,7 @@ class APIManager {
     static let baseUrl: String = "https://pixabay.com/api/?key="
   }
   
-  class func loadImages(search: String?, completion result: @escaping ([String]?, Error?) -> Void) {
+  class func loadImages(search: String?, completion result: @escaping (SearchCodable?, Error?) -> Void) {
     // Constructing and checking request url
     var urlString = URLs.baseUrl + pixabayApiKey
     if let search = search {
@@ -31,11 +31,7 @@ class APIManager {
       if let responseData = response.data {
         do {
           let searchCodable = try JSONDecoder().decode(SearchCodable.self, from: responseData)
-          var imageUrls: [String] = []
-          for hit in searchCodable.hits {
-            imageUrls.append(hit.webformatURL)
-          }
-          result(imageUrls, nil)
+          result(searchCodable, nil)
         } catch let error {
           result(nil, error)
         }

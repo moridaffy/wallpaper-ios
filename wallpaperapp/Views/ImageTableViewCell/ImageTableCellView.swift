@@ -1,5 +1,5 @@
 //
-//  ImageCellView.swift
+//  ImageTableViewCellView.swift
 //  wallpaperapp
 //
 //  Created by Максим Скрябин on 13/02/2019.
@@ -9,13 +9,13 @@
 import SnapKit
 import Kingfisher
 
-class ImageCellView: UITableViewCell {
+class ImageTableCellView: UITableViewCell {
   
   private weak var photoImageView: UIImageView!
   
-  private var model: ImageCellViewModel!
+  private var model: ImageTableCellViewModel!
   
-  func setup(model: ImageCellViewModel) {
+  func setup(model: ImageTableCellViewModel) {
     self.model = model
     
     setupUI()

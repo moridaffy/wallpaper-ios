@@ -16,7 +16,7 @@ class ImageListViewController: UIViewController {
   private var refresher: UIRefreshControl?
   
   private let disposeBag = DisposeBag()
-  private let model = ImageListViewModel()
+  private var model: ImageListViewModel!
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -25,6 +25,17 @@ class ImageListViewController: UIViewController {
     setupConstraints()
     setupTableView()
     setupReactive()
+  }
+  
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    
+    // TODO: uncomment to enable automatic image loading
+//    pullToRefresh()
+  }
+  
+  func setup(model: ImageListViewModel = ImageListViewModel()) {
+    self.model = model
   }
   
   private func setupUI() {
@@ -46,17 +57,17 @@ class ImageListViewController: UIViewController {
     self.refresher = refresher
     
     tableView.delegate = self
-    tableView.register(ImageCellView.self, forCellReuseIdentifier: "ImageCell")
+    tableView.register(ImageTableCellView.self, forCellReuseIdentifier: "ImageTableCell")
   }
   
   private func setupReactive() {
-    model.imageUrl.asObservable()
-      .bind(to: tableView.rx.items) { tableView, _, url in
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "ImageCell") as? ImageCellView {
-          cell.setup(model: ImageCellViewModel(imageUrl: url))
+    model.images.asObservable()
+      .bind(to: tableView.rx.items) { (tableView, _, model) in
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "ImageTableCell") as? ImageTableCellView {
+          cell.setup(model: ImageTableCellViewModel(imageUrl: model.previewUrl))
           return cell
         } else {
-          fatalError("🔥 Can't dequeue cell with ID: TaskListCell")
+          fatalError("🔥 Can't dequeue cell with ID: ImageTableCell")
         }
       }.disposed(by: disposeBag)
   }
@@ -64,10 +75,10 @@ class ImageListViewController: UIViewController {
 
 extension ImageListViewController {
   @objc private func pullToRefresh() {
-    APIManager.loadImages(search: nil) { [weak self] (imageUrl, error) in
+    APIManager.loadImages(search: model.category?.type.rawValue) { [weak self] (response, error) in
       self?.refresher?.endRefreshing()
-      if let imageUrl = imageUrl {
-        self?.model.imageUrl.value = imageUrl
+      if let response = response {
+        self?.model.setupContent(response: response)
       } else {
         print("🔥 Failed to load images: \(error?.localizedDescription)")
       }

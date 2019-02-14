@@ -8,4 +8,9 @@
 
 class CategoriesViewModel {
   
+  let categories: [WallpaperCategory] = [WallpaperCategory(type: .car),
+                                         WallpaperCategory(type: .nature),
+                                         WallpaperCategory(type: .animal),
+                                         WallpaperCategory(type: .city)]
+  
 }

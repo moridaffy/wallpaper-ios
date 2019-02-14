@@ -13,4 +13,10 @@ struct SearchCodable: Codable {
 struct HitCodable: Codable {
   let largeImageURL: String
   let webformatURL: String
+  let pageURL: String
+  let user: String
+  
+  let likes: Int
+  let favorites: Int
+  let views: Int
 }

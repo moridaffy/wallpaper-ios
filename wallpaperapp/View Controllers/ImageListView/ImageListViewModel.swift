@@ -10,6 +10,24 @@ import RxSwift
 
 class ImageListViewModel {
   
-  let imageUrl = Variable([] as [String])
+  let images = Variable([] as [WallpaperImage])
+  let category: WallpaperCategory?
+  
+  init(category: WallpaperCategory? = nil) {
+    self.category = category
+  }
+  
+  func setupContent(response: SearchCodable) {
+    var images: [WallpaperImage] = []
+    for hit in response.hits {
+      images.append(WallpaperImage(fullUrl: hit.largeImageURL,
+                                   previewUrl: hit.webformatURL,
+                                   pageUrl: hit.pageURL,
+                                   user: hit.user,
+                                   likes: hit.favorites + hit.likes,
+                                   views: hit.views))
+    }
+    self.images.value = images
+  }
   
 }
