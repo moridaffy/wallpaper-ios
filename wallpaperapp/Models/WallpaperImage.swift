@@ -6,6 +6,8 @@
 //  Copyright © 2019 MSKR. All rights reserved.
 //
 
+import UIKit
+
 class WallpaperImage {
   let fullUrl: String
   let previewUrl: String
@@ -13,6 +15,8 @@ class WallpaperImage {
   let user: String
   let likes: Int
   let views: Int
+  
+  var image: UIImage?
   
   init(fullUrl: String,
        previewUrl: String,

@@ -70,6 +70,15 @@ class ImageListViewController: UIViewController {
           fatalError("🔥 Can't dequeue cell with ID: ImageTableCell")
         }
       }.disposed(by: disposeBag)
+    
+    tableView.rx.modelSelected(WallpaperImage.self)
+      .subscribe { [weak self] (event) in
+        if let image = event.element {
+          let imageDetailedViewController = ImageDetailedViewController()
+          imageDetailedViewController.setup(model: ImageDetailedViewModel(image: image))
+          self?.present(imageDetailedViewController.embedInNavigationController(), animated: true, completion: nil)
+        }
+      }.disposed(by: disposeBag)
   }
 }
 

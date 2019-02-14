@@ -29,6 +29,8 @@
 		0C8010612214212600CB4AD2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8010602214212600CB4AD2 /* SettingsViewController.swift */; };
 		0C8010632214213200CB4AD2 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8010622214213200CB4AD2 /* SettingsViewModel.swift */; };
 		0C8010662214319500CB4AD2 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8010652214319500CB4AD2 /* APIManager.swift */; };
+		0CA6C41D22159213000CE1F3 /* ImageDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA6C41C22159213000CE1F3 /* ImageDetailedViewController.swift */; };
+		0CA6C41F2215921D000CE1F3 /* ImageDetailedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA6C41E2215921D000CE1F3 /* ImageDetailedViewModel.swift */; };
 		983B90EED50D0857D8C0AD92 /* Pods_wallpaperapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 755D933F349575DFAF442398 /* Pods_wallpaperapp.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +59,8 @@
 		0C8010602214212600CB4AD2 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		0C8010622214213200CB4AD2 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		0C8010652214319500CB4AD2 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		0CA6C41C22159213000CE1F3 /* ImageDetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailedViewController.swift; sourceTree = "<group>"; };
+		0CA6C41E2215921D000CE1F3 /* ImageDetailedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailedViewModel.swift; sourceTree = "<group>"; };
 		755D933F349575DFAF442398 /* Pods_wallpaperapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wallpaperapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92A344CE975F32BBAEC96DE3 /* Pods-wallpaperapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wallpaperapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-wallpaperapp/Pods-wallpaperapp.release.xcconfig"; sourceTree = "<group>"; };
 		C41D526A99862C7F0EC235AC /* Pods-wallpaperapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wallpaperapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wallpaperapp/Pods-wallpaperapp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -152,6 +156,7 @@
 			children = (
 				0C8010482214171100CB4AD2 /* RootTabBarView */,
 				0C80105722141A3A00CB4AD2 /* ImageListView */,
+				0CA6C41B22158B47000CE1F3 /* ImageDetailedView */,
 				0C80105522141A1800CB4AD2 /* CategoriesView */,
 				0C80105622141A2C00CB4AD2 /* SettingsView */,
 			);
@@ -210,6 +215,15 @@
 				0C2D36D8221452A1006901AA /* APIManager+Credentials.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		0CA6C41B22158B47000CE1F3 /* ImageDetailedView */ = {
+			isa = PBXGroup;
+			children = (
+				0CA6C41C22159213000CE1F3 /* ImageDetailedViewController.swift */,
+				0CA6C41E2215921D000CE1F3 /* ImageDetailedViewModel.swift */,
+			);
+			path = ImageDetailedView;
 			sourceTree = "<group>";
 		};
 		43BFE3AEDD85FC25F318B5A2 /* Pods */ = {
@@ -368,6 +382,7 @@
 				0C80105922141A5000CB4AD2 /* ImageListViewController.swift in Sources */,
 				0C80104C2214172C00CB4AD2 /* RootTabBarViewModel.swift in Sources */,
 				0C8010612214212600CB4AD2 /* SettingsViewController.swift in Sources */,
+				0CA6C41F2215921D000CE1F3 /* ImageDetailedViewModel.swift in Sources */,
 				0C2D36E322145C64006901AA /* ImageTableCellViewModel.swift in Sources */,
 				0C374B2C2214955100127F80 /* CategoryCollectionCellViewModel.swift in Sources */,
 				0C374B2E221499EF00127F80 /* CategoriesCollectionViewLayout.swift in Sources */,
@@ -379,6 +394,7 @@
 				0C8010352214130300CB4AD2 /* AppDelegate.swift in Sources */,
 				0C80105D2214211100CB4AD2 /* CategoriesViewController.swift in Sources */,
 				0C80105F2214211B00CB4AD2 /* CategoriesViewModel.swift in Sources */,
+				0CA6C41D22159213000CE1F3 /* ImageDetailedViewController.swift in Sources */,
 				0C801054221419D200CB4AD2 /* UIViewController+Alerts.swift in Sources */,
 				0C2D36DC2214550E006901AA /* Codable.swift in Sources */,
 				0C374B2A2214954100127F80 /* CategoryCollectionCellView.swift in Sources */,
