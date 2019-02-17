@@ -11,6 +11,7 @@ import SnapKit
 class ImageDetailedViewController: UIViewController {
   
   private weak var imageView: UIImageView!
+  private weak var tapGestureRecognizer: UITapGestureRecognizer!
   
   private var model: ImageDetailedViewModel!
   
@@ -26,20 +27,25 @@ class ImageDetailedViewController: UIViewController {
     self.model = model
   }
   
+  @objc private func imageTapped() {
+    showElements()
+  }
+  
   @objc private func closeButtonTapped() {
     dismiss(animated: true, completion: nil)
   }
   
   @objc private func saveButtonTapped() {
     guard let image = model.image.image else { return }
-    UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+    UIImageWriteToSavedPhotosAlbum(image, self, #selector(savingCompleted(image:error:contextInfo:)), nil)
+  }
+  
+  @objc private func savingCompleted(image: UIImage?, error: Error?, contextInfo: UnsafeMutableRawPointer?) {
+    // TODO: create some kind of toast alert
+    print("🔥 successfully saved image")
   }
   
   private func setupUI() {
-    navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-    navigationController?.navigationBar.shadowImage = UIImage()
-    navigationController?.navigationBar.barTintColor = .clear
-    
     let closeButton = UIBarButtonItem(title: NSLocalizedString("Close", comment: ""), style: .plain, target: self, action: #selector(closeButtonTapped))
     navigationItem.leftBarButtonItem = closeButton
     let saveButton = UIBarButtonItem(title: NSLocalizedString("Save", comment: ""), style: .done, target: self, action: #selector(saveButtonTapped))
@@ -48,8 +54,15 @@ class ImageDetailedViewController: UIViewController {
     let imageView = UIImageView()
     imageView.contentMode = .scaleAspectFill
     imageView.backgroundColor = UIColor.red
+    imageView.isUserInteractionEnabled = true
     view.addSubview(imageView)
     self.imageView = imageView
+    
+    let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
+    tapGestureRecognizer.numberOfTapsRequired = 1
+    tapGestureRecognizer.numberOfTouchesRequired = 1
+    self.imageView.addGestureRecognizer(tapGestureRecognizer)
+    self.tapGestureRecognizer = tapGestureRecognizer
   }
   
   private func setupConstraints() {
@@ -64,6 +77,11 @@ class ImageDetailedViewController: UIViewController {
         self?.model.image.image = image
       }
     }
+  }
+  
+  private func showElements() {
+    model.elementsHidden = !model.elementsHidden
+    navigationController?.setNavigationBarHidden(model.elementsHidden, animated: true)
   }
   
 }

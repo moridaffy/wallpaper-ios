@@ -64,7 +64,7 @@ class ImageListViewController: UIViewController {
     model.images.asObservable()
       .bind(to: tableView.rx.items) { (tableView, _, model) in
         if let cell = tableView.dequeueReusableCell(withIdentifier: "ImageTableCell") as? ImageTableCellView {
-          cell.setup(model: ImageTableCellViewModel(imageUrl: model.previewUrl))
+          cell.setup(model: ImageTableCellViewModel(image: model))
           return cell
         } else {
           fatalError("🔥 Can't dequeue cell with ID: ImageTableCell")

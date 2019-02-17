@@ -9,6 +9,7 @@
 class ImageDetailedViewModel {
   
   let image: WallpaperImage
+  var elementsHidden: Bool = false
   
   init(image: WallpaperImage) {
     self.image = image

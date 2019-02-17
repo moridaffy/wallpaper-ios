@@ -8,10 +8,10 @@
 
 class ImageTableCellViewModel {
   
-  let imageUrl: String
+  let image: WallpaperImage
   
-  init(imageUrl: String) {
-    self.imageUrl = imageUrl
+  init(image: WallpaperImage) {
+    self.image = image
   }
   
 }
