@@ -21,6 +21,7 @@ class ImageTableCellView: UITableViewCell {
   private var model: ImageTableCellViewModel!
   
   override func prepareForReuse() {
+    super.prepareForReuse()
     viewsIconImageView.removeFromSuperview()
     viewsLabel.removeFromSuperview()
     likesIconImageView.removeFromSuperview()

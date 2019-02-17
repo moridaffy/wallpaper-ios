@@ -24,6 +24,11 @@ extension WallpaperCategory {
     case city = "city"
     case animal = "animal"
     case nature = "nature"
+    case food = "food"
+    case fashion = "fashion"
+    case abstract = "abstract"
+    case music = "music"
+    case sport = "sport"
     
     var image: UIImage {
       switch self {
@@ -35,6 +40,16 @@ extension WallpaperCategory {
         return #imageLiteral(resourceName: "category_animal")
       case .nature:
         return #imageLiteral(resourceName: "category_nature")
+      case .food:
+        return #imageLiteral(resourceName: "category_food")
+      case .fashion:
+        return #imageLiteral(resourceName: "category_fashion")
+      case .abstract:
+        return #imageLiteral(resourceName: "category_abstract")
+      case .music:
+        return #imageLiteral(resourceName: "category_music")
+      case .sport:
+        return #imageLiteral(resourceName: "category_sport")
       }
     }
     
@@ -48,6 +63,16 @@ extension WallpaperCategory {
         return NSLocalizedString("Animals", comment: "")
       case .nature:
         return NSLocalizedString("Nature", comment: "")
+      case .food:
+        return NSLocalizedString("Food", comment: "")
+      case .fashion:
+        return NSLocalizedString("Fashion", comment: "")
+      case .abstract:
+        return NSLocalizedString("Abstract", comment: "")
+      case .music:
+        return NSLocalizedString("Music", comment: "")
+      case .sport:
+        return NSLocalizedString("Sport", comment: "")
       }
     }
   }

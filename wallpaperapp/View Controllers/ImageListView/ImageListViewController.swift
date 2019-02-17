@@ -34,8 +34,11 @@ class ImageListViewController: UIViewController {
 //    pullToRefresh()
   }
   
-  func setup(model: ImageListViewModel = ImageListViewModel()) {
+  func setup(title: String?, model: ImageListViewModel = ImageListViewModel()) {
     self.model = model
+    if let title = title {
+      self.title = title
+    }
   }
   
   private func setupUI() {

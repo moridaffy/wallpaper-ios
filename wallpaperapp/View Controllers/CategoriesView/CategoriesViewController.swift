@@ -63,7 +63,8 @@ extension CategoriesViewController: UICollectionViewDataSource, UICollectionView
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     if collectionView.dequeueReusableCell(withReuseIdentifier: "CategoryCollectionCell", for: indexPath) is CategoryCollectionCellView {
       let imageListViewController = ImageListViewController()
-      imageListViewController.setup(model: ImageListViewModel(category: model.categories[indexPath.row]))
+      let category = model.categories[indexPath.row]
+      imageListViewController.setup(title: category.type.name, model: ImageListViewModel(category: model.categories[indexPath.row]))
       navigationController?.pushViewController(imageListViewController, animated: true)
     }
   }

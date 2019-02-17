@@ -20,9 +20,9 @@ class RootTabBarViewController: UITabBarController {
   
   private func setupViewControllers() {
     let imageListController = ImageListViewController()
-    imageListController.setup()
+    imageListController.setup(title: NSLocalizedString("Latest", comment: ""))
     let featuredViewController = imageListController.embedInNavigationController()
-    featuredViewController.tabBarItem = UITabBarItem(title: NSLocalizedString("Featured", comment: ""), image: nil, tag: 1)
+    featuredViewController.tabBarItem = UITabBarItem(title: NSLocalizedString("Latest", comment: ""), image: nil, tag: 1)
     
     let categoriesViewController = CategoriesViewController().embedInNavigationController()
     categoriesViewController.tabBarItem = UITabBarItem(title: NSLocalizedString("Categories", comment: ""), image: nil, tag: 2)

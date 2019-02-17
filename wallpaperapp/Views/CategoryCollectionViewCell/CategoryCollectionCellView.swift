@@ -16,6 +16,13 @@ class CategoryCollectionCellView: UICollectionViewCell {
   
   private var model: CategoryCollectionCellViewModel!
   
+  override func prepareForReuse() {
+    super.prepareForReuse()
+    categoryImageView.removeFromSuperview()
+    nameLabel.removeFromSuperview()
+    shadowView.removeFromSuperview()
+  }
+  
   func setup(model: CategoryCollectionCellViewModel) {
     self.model = model
     
