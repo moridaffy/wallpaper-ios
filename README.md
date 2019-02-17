@@ -2,6 +2,9 @@
 Simple open-sourced wallpaper app for iOS
 
 ## Plan
+- [X] Load and cache images
+- [X] Save images to photo library
+- [X] Categories
 - [ ] Proper Readme
 - [ ] Full Russian and English localization
 - [ ] Apply blur to wallpapers before saving them
