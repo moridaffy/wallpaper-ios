@@ -29,7 +29,6 @@
 		0C8010612214212600CB4AD2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8010602214212600CB4AD2 /* SettingsViewController.swift */; };
 		0C8010632214213200CB4AD2 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8010622214213200CB4AD2 /* SettingsViewModel.swift */; };
 		0C8010662214319500CB4AD2 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8010652214319500CB4AD2 /* APIManager.swift */; };
-		0C8FC0682219CB4100D70F4A /* UIView+Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8FC0672219CB4100D70F4A /* UIView+Blur.swift */; };
 		0CA6C41D22159213000CE1F3 /* ImageDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA6C41C22159213000CE1F3 /* ImageDetailedViewController.swift */; };
 		0CA6C41F2215921D000CE1F3 /* ImageDetailedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA6C41E2215921D000CE1F3 /* ImageDetailedViewModel.swift */; };
 		983B90EED50D0857D8C0AD92 /* Pods_wallpaperapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 755D933F349575DFAF442398 /* Pods_wallpaperapp.framework */; };
@@ -60,7 +59,6 @@
 		0C8010602214212600CB4AD2 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		0C8010622214213200CB4AD2 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		0C8010652214319500CB4AD2 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
-		0C8FC0672219CB4100D70F4A /* UIView+Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Blur.swift"; sourceTree = "<group>"; };
 		0CA6C41C22159213000CE1F3 /* ImageDetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailedViewController.swift; sourceTree = "<group>"; };
 		0CA6C41E2215921D000CE1F3 /* ImageDetailedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailedViewModel.swift; sourceTree = "<group>"; };
 		755D933F349575DFAF442398 /* Pods_wallpaperapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wallpaperapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,7 +176,6 @@
 			isa = PBXGroup;
 			children = (
 				0C801053221419D200CB4AD2 /* UIViewController+Alerts.swift */,
-				0C8FC0672219CB4100D70F4A /* UIView+Blur.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -396,7 +393,6 @@
 				0C374B2722148F4C00127F80 /* WallpaperImage.swift in Sources */,
 				0C8010352214130300CB4AD2 /* AppDelegate.swift in Sources */,
 				0C80105D2214211100CB4AD2 /* CategoriesViewController.swift in Sources */,
-				0C8FC0682219CB4100D70F4A /* UIView+Blur.swift in Sources */,
 				0C80105F2214211B00CB4AD2 /* CategoriesViewModel.swift in Sources */,
 				0CA6C41D22159213000CE1F3 /* ImageDetailedViewController.swift in Sources */,
 				0C801054221419D200CB4AD2 /* UIViewController+Alerts.swift in Sources */,

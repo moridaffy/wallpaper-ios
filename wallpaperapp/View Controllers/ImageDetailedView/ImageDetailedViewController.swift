@@ -10,9 +10,9 @@ import SnapKit
 
 class ImageDetailedViewController: UIViewController {
   
+  private weak var backgroundImageView: UIImageView!
   private weak var imageView: UIImageView!
   private weak var blurSlider: UISlider!
-  private weak var blurView: UIView!
   private weak var tapGestureRecognizer: UITapGestureRecognizer!
   
   private var model: ImageDetailedViewModel!
@@ -46,23 +46,32 @@ class ImageDetailedViewController: UIViewController {
   }
   
   @objc private func saveButtonTapped() {
-    guard let image = model.image.image else { return }
-    UIImageWriteToSavedPhotosAlbum(image, self, #selector(savingCompleted(image:error:contextInfo:)), nil)
+    // TODO: this probably can be done in a cleaner way
+    guard let uiImageToSave = imageView.image else { return }
+    let context = CIContext()
+    guard let cgImageToSave = context.createCGImage(uiImageToSave.ciImage!, from: uiImageToSave.ciImage!.extent) else { return }
+    let imageToSave = UIImage(cgImage: cgImageToSave)
+    UIImageWriteToSavedPhotosAlbum(imageToSave, self, #selector(savingCompleted(image:error:contextInfo:)), nil)
   }
   
   @objc private func blurSliderValueChanged(_ sender: Any) {
-    // TODO: maybe try to generate blurred UIImage every time this value changes
-    //       and store it as a variable. If user taps save button, stored image
-    //       will be saved to photos library.
-    
     if let slider = sender as? UISlider {
-      blurView.blurView.intensity = CGFloat(slider.value)
+      guard let originalImage = model.image.image else { return }
+      guard let originalCIImage = CIImage(image: originalImage) else { return }
+      
+      let blurFilter = CIFilter(name: "CIGaussianBlur",
+                                parameters: [kCIInputImageKey: originalCIImage,
+                                             kCIInputRadiusKey: slider.value * 50.0])
+      if let outputCIImage = blurFilter?.outputImage?.cropped(to: originalCIImage.extent) {
+        model.presentedImage = UIImage(ciImage: outputCIImage)
+        imageView.image = model.presentedImage
+      }
     }
   }
   
   @objc private func savingCompleted(image: UIImage?, error: Error?, contextInfo: UnsafeMutableRawPointer?) {
     // TODO: create some kind of toast alert
-    print("🔥 successfully saved image")
+    print("successfully saved image")
   }
   
   private func setupUI() {
@@ -71,37 +80,38 @@ class ImageDetailedViewController: UIViewController {
     let saveButton = UIBarButtonItem(title: NSLocalizedString("Save", comment: ""), style: .done, target: self, action: #selector(saveButtonTapped))
     navigationItem.rightBarButtonItem = saveButton
     
+    let backgroundImageView = UIImageView()
+    backgroundImageView.contentMode = .scaleAspectFill
+    backgroundImageView.isUserInteractionEnabled = true
+    view.addSubview(backgroundImageView)
+    self.backgroundImageView = backgroundImageView
+    
     let imageView = UIImageView()
     imageView.contentMode = .scaleAspectFill
-    imageView.backgroundColor = UIColor.red
     imageView.isUserInteractionEnabled = true
     view.addSubview(imageView)
     self.imageView = imageView
     
-    let blurView = UIView()
-    _ = blurView.blurView.setup(style: .light, intensity: 0.0)
-    view.addSubview(blurView)
-    self.blurView = blurView
-    
     let blurSlider = UISlider()
     blurSlider.value = 0.0
-    blurSlider.addTarget(self, action: #selector(blurSliderValueChanged(_:)), for: .valueChanged)
+    blurSlider.addTarget(self, action: #selector(blurSliderValueChanged(_:)), for: .touchUpInside)
+    blurSlider.addTarget(self, action: #selector(blurSliderValueChanged(_:)), for: .touchUpOutside)
     view.addSubview(blurSlider)
     self.blurSlider = blurSlider
     
     let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
     tapGestureRecognizer.numberOfTapsRequired = 1
     tapGestureRecognizer.numberOfTouchesRequired = 1
-    self.blurView.addGestureRecognizer(tapGestureRecognizer)
+    self.imageView.addGestureRecognizer(tapGestureRecognizer)
     self.tapGestureRecognizer = tapGestureRecognizer
   }
   
   private func setupConstraints() {
-    imageView.snp.makeConstraints { (make) in
+    backgroundImageView.snp.makeConstraints { (make) in
       make.leading.trailing.top.bottom.equalTo(view)
     }
     
-    blurView.snp.makeConstraints { (make) in
+    imageView.snp.makeConstraints { (make) in
       make.leading.trailing.top.bottom.equalTo(view)
     }
     
@@ -115,6 +125,7 @@ class ImageDetailedViewController: UIViewController {
   private func setupContent() {
     imageView.kf.setImage(with: URL(string: model.image.fullUrl)) { [weak self] result in
       if let image = result.value?.image {
+        self?.backgroundImageView.image = image
         self?.model.image.image = image
       }
     }

@@ -7,7 +7,7 @@ Simple open-sourced wallpaper app for iOS
 - [X] Categories
 - [ ] Proper Readme
 - [ ] Full Russian and English localization
-- [ ] Apply blur to wallpapers before saving them
+- [X] Apply blur to wallpapers before saving them
 - [ ] Preview image as wallpaper (show demo icons on top of the wallpaper)
 - [ ] Dark mode
 - [ ] Icon
