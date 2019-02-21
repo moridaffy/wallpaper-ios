@@ -90,9 +90,9 @@ extension ImageListViewController {
     APIManager.loadImages(search: model.category?.type.rawValue) { [weak self] (response, error) in
       self?.refresher?.endRefreshing()
       if let response = response {
-        self?.model.setupContent(response: response)
+        self?.model.setupContent(response: response, append: false)
       } else {
-        print("🔥 Failed to load images: \(error?.localizedDescription)")
+        print("🔥 Failed to load images: \(error?.localizedDescription ?? "unknown error")")
       }
     }
   }
@@ -101,5 +101,22 @@ extension ImageListViewController {
 extension ImageListViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return tableView.frame.height / 4
+  }
+  
+  func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    if indexPath.row == model.images.value.count - 1 {
+      let indicator = UIActivityIndicatorView()
+      indicator.startAnimating()
+      tableView.tableFooterView = indicator
+      APIManager.loadImages(search: model.category?.type.rawValue, page: model.page + 1) { [weak self] (response, error) in
+        self?.tableView.tableFooterView = nil
+        if let response = response {
+          self?.model.page = (self?.model.page ?? 0) + 1
+          self?.model.setupContent(response: response, append: true)
+        } else {
+          print("🔥 Failed to load images: \(error?.localizedDescription ?? "unknown error")")
+        }
+      }
+    }
   }
 }

@@ -12,12 +12,13 @@ class ImageListViewModel {
   
   let images = Variable([] as [WallpaperImage])
   let category: WallpaperCategory?
+  var page: Int = 1
   
   init(category: WallpaperCategory? = nil) {
     self.category = category
   }
   
-  func setupContent(response: SearchCodable) {
+  func setupContent(response: SearchCodable, append: Bool) {
     var images: [WallpaperImage] = []
     for hit in response.hits {
       images.append(WallpaperImage(fullUrl: hit.largeImageURL,
@@ -27,7 +28,10 @@ class ImageListViewModel {
                                    likes: hit.favorites + hit.likes,
                                    views: hit.views))
     }
-    self.images.value = images
+    if append {
+      self.images.value.append(contentsOf: images)
+    } else {
+      self.images.value = images
+    }
   }
-  
 }

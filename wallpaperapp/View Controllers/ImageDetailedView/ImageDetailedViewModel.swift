@@ -11,8 +11,8 @@ import UIKit
 class ImageDetailedViewModel {
   
   let image: WallpaperImage
-  var presentedImage: UIImage?
   var elementsHidden: Bool = false
+  var iconsHidden: Bool = true
   
   init(image: WallpaperImage) {
     self.image = image

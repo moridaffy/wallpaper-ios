@@ -91,8 +91,7 @@
 		0C2D36DD22145C3B006901AA /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0C2D36DF22145C4A006901AA /* ImageTableViewCell */,
-				0C374B28221492EA00127F80 /* CategoryCollectionViewCell */,
+				0C9FCC68221EC81B008C408C /* Cells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -215,6 +214,15 @@
 				0C2D36D8221452A1006901AA /* APIManager+Credentials.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		0C9FCC68221EC81B008C408C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0C2D36DF22145C4A006901AA /* ImageTableViewCell */,
+				0C374B28221492EA00127F80 /* CategoryCollectionViewCell */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		0CA6C41B22158B47000CE1F3 /* ImageDetailedView */ = {

@@ -14,12 +14,16 @@ class APIManager {
     static let baseUrl: String = "https://pixabay.com/api/?key="
   }
   
-  class func loadImages(search: String?, completion result: @escaping (SearchCodable?, Error?) -> Void) {
+  class func loadImages(search: String?, featured: Bool? = nil, page: Int = 1, completion result: @escaping (SearchCodable?, Error?) -> Void) {
     // Constructing and checking request url
     var urlString = URLs.baseUrl + pixabayApiKey
     if let search = search {
       urlString += "&q=\(search)"
     }
+    if let featured = featured {
+      urlString += "&editors_choice=\(featured ? "true" : "false")"
+    }
+    urlString += "&page=\(page)"
     
     guard let url = URL(string: urlString) else {
       result(nil, nil)

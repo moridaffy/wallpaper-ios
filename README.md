@@ -10,5 +10,8 @@ Simple open-sourced wallpaper app for iOS
 - [X] Apply blur to wallpapers before saving them
 - [ ] Preview image as wallpaper (show demo icons on top of the wallpaper)
 - [ ] Dark mode
+- [ ] Settings (blur mode, crop mode)
+- [X] Pagination (through API response)
+- [ ] Nice UI
 - [ ] Icon
 - [ ] Uploading to App Store (not 100% sure yet)

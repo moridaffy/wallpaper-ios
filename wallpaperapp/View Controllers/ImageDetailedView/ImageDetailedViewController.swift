@@ -20,6 +20,8 @@ class ImageDetailedViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    view.backgroundColor = UIColor.black
+    
     setupUI()
     setupConstraints()
     setupContent()
@@ -46,25 +48,24 @@ class ImageDetailedViewController: UIViewController {
   }
   
   @objc private func saveButtonTapped() {
-    // TODO: this probably can be done in a cleaner way
-    guard let uiImageToSave = imageView.image else { return }
     let context = CIContext()
-    guard let cgImageToSave = context.createCGImage(uiImageToSave.ciImage!, from: uiImageToSave.ciImage!.extent) else { return }
-    let imageToSave = UIImage(cgImage: cgImageToSave)
-    UIImageWriteToSavedPhotosAlbum(imageToSave, self, #selector(savingCompleted(image:error:contextInfo:)), nil)
+    if let ciImage = imageView.image?.ciImage,
+       let imageToSave = context.createCGImage(ciImage, from: ciImage.extent) {
+      
+      UIImageWriteToSavedPhotosAlbum(UIImage(cgImage: imageToSave), self, #selector(savingCompleted(image:error:contextInfo:)), nil)
+    }
   }
   
   @objc private func blurSliderValueChanged(_ sender: Any) {
-    if let slider = sender as? UISlider {
-      guard let originalImage = model.image.image else { return }
-      guard let originalCIImage = CIImage(image: originalImage) else { return }
+    if let slider = sender as? UISlider,
+       let fullImage = model.image.image,
+       let fullCIImage = CIImage(image: fullImage) {
       
       let blurFilter = CIFilter(name: "CIGaussianBlur",
-                                parameters: [kCIInputImageKey: originalCIImage,
-                                             kCIInputRadiusKey: slider.value * 50.0])
-      if let outputCIImage = blurFilter?.outputImage?.cropped(to: originalCIImage.extent) {
-        model.presentedImage = UIImage(ciImage: outputCIImage)
-        imageView.image = model.presentedImage
+                                parameters: [kCIInputImageKey: fullCIImage.clampedToExtent(),
+                                             kCIInputRadiusKey: slider.value * 25.0])
+      if let outputCIImage = blurFilter?.outputImage?.cropped(to: fullCIImage.extent) {
+        imageView.image = UIImage(ciImage: outputCIImage)
       }
     }
   }
