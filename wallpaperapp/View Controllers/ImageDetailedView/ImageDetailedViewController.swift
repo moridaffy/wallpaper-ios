@@ -10,9 +10,10 @@ import SnapKit
 
 class ImageDetailedViewController: UIViewController {
   
-  private weak var backgroundImageView: UIImageView!
   private weak var imageView: UIImageView!
+  private weak var iconsImageView: UIImageView!
   private weak var blurSlider: UISlider!
+  private weak var iconsButton: UIButton!
   private weak var tapGestureRecognizer: UITapGestureRecognizer!
   
   private var model: ImageDetailedViewModel!
@@ -51,8 +52,15 @@ class ImageDetailedViewController: UIViewController {
     let context = CIContext()
     if let ciImage = imageView.image?.ciImage,
        let imageToSave = context.createCGImage(ciImage, from: ciImage.extent) {
-      
+
       UIImageWriteToSavedPhotosAlbum(UIImage(cgImage: imageToSave), self, #selector(savingCompleted(image:error:contextInfo:)), nil)
+    }
+  }
+  
+  @objc private func iconsButtonTapped() {
+    model.iconsHidden = !model.iconsHidden
+    UIView.animate(withDuration: 0.3) {
+      self.iconsImageView.alpha = self.model.iconsHidden ? 0.0 : 1.0
     }
   }
   
@@ -72,7 +80,7 @@ class ImageDetailedViewController: UIViewController {
   
   @objc private func savingCompleted(image: UIImage?, error: Error?, contextInfo: UnsafeMutableRawPointer?) {
     // TODO: create some kind of toast alert
-    print("successfully saved image")
+    showAlert(title: NSLocalizedString("Done", comment: ""), body: NSLocalizedString("Image successfylly saved", comment: ""), button: "Ок", actions: nil)
   }
   
   private func setupUI() {
@@ -81,17 +89,18 @@ class ImageDetailedViewController: UIViewController {
     let saveButton = UIBarButtonItem(title: NSLocalizedString("Save", comment: ""), style: .done, target: self, action: #selector(saveButtonTapped))
     navigationItem.rightBarButtonItem = saveButton
     
-    let backgroundImageView = UIImageView()
-    backgroundImageView.contentMode = .scaleAspectFill
-    backgroundImageView.isUserInteractionEnabled = true
-    view.addSubview(backgroundImageView)
-    self.backgroundImageView = backgroundImageView
-    
     let imageView = UIImageView()
     imageView.contentMode = .scaleAspectFill
     imageView.isUserInteractionEnabled = true
     view.addSubview(imageView)
     self.imageView = imageView
+    
+    let iconsImageView = UIImageView()
+    iconsImageView.contentMode = .scaleAspectFill
+    iconsImageView.isUserInteractionEnabled = false
+    iconsImageView.alpha = 0.0
+    view.addSubview(iconsImageView)
+    self.iconsImageView = iconsImageView
     
     let blurSlider = UISlider()
     blurSlider.value = 0.0
@@ -99,6 +108,12 @@ class ImageDetailedViewController: UIViewController {
     blurSlider.addTarget(self, action: #selector(blurSliderValueChanged(_:)), for: .touchUpOutside)
     view.addSubview(blurSlider)
     self.blurSlider = blurSlider
+    
+    let iconsButton = UIButton()
+    iconsButton.backgroundColor = UIColor.white
+    iconsButton.addTarget(self, action: #selector(iconsButtonTapped), for: .touchUpInside)
+    view.addSubview(iconsButton)
+    self.iconsButton = iconsButton
     
     let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
     tapGestureRecognizer.numberOfTapsRequired = 1
@@ -108,25 +123,31 @@ class ImageDetailedViewController: UIViewController {
   }
   
   private func setupConstraints() {
-    backgroundImageView.snp.makeConstraints { (make) in
-      make.leading.trailing.top.bottom.equalTo(view)
-    }
-    
     imageView.snp.makeConstraints { (make) in
       make.leading.trailing.top.bottom.equalTo(view)
     }
     
-    blurSlider.snp.makeConstraints { (make) in
-      make.leading.equalTo(view).offset(16.0)
+    iconsImageView.snp.makeConstraints { (make) in
+      make.leading.trailing.top.bottom.equalTo(view)
+    }
+    
+    iconsButton.snp.makeConstraints { (make) in
       make.trailing.equalTo(view).offset(-16.0)
       make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-16.0)
+      make.height.width.equalTo(50.0)
+    }
+    
+    blurSlider.snp.makeConstraints { (make) in
+      make.leading.equalTo(view).offset(16.0)
+      make.trailing.equalTo(iconsButton.snp.leading).offset(-16.0)
+      make.centerY.equalTo(iconsButton)
     }
   }
   
   private func setupContent() {
+    iconsImageView.image = #imageLiteral(resourceName: "icons_x")
     imageView.kf.setImage(with: URL(string: model.image.fullUrl)) { [weak self] result in
       if let image = result.value?.image {
-        self?.backgroundImageView.image = image
         self?.model.image.image = image
       }
     }
@@ -138,6 +159,7 @@ class ImageDetailedViewController: UIViewController {
     navigationController?.setNavigationBarHidden(model.elementsHidden, animated: true)
     UIView.animate(withDuration: 0.3) {
       self.blurSlider.alpha = self.model.elementsHidden ? 0.0 : 1.0
+      self.iconsButton.alpha = self.model.elementsHidden ? 0.0 : 1.0
     }
   }
   
