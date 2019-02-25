@@ -8,7 +8,4 @@
 
 class SettingsViewModel {
   
-  var blurMode = SettingsManager.shared.blurMode
-  var cropMode = SettingsManager.shared.cropMode
-  
 }

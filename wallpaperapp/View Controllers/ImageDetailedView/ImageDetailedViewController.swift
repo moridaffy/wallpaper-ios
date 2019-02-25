@@ -69,7 +69,7 @@ class ImageDetailedViewController: UIViewController {
        let fullImage = model.image.image,
        let fullCIImage = CIImage(image: fullImage) {
       
-      let blurFilter = CIFilter(name: "CIGaussianBlur",
+      let blurFilter = CIFilter(name: (SettingsManager.shared.blurMode ?? .gaussian).filterName,
                                 parameters: [kCIInputImageKey: fullCIImage.clampedToExtent(),
                                              kCIInputRadiusKey: slider.value * 25.0])
       if let outputCIImage = blurFilter?.outputImage?.cropped(to: fullCIImage.extent) {
@@ -145,7 +145,6 @@ class ImageDetailedViewController: UIViewController {
   }
   
   private func setupContent() {
-    print(UIDevice.current.type.rawValue)
     iconsImageView.image = UIDevice.current.type.iconsImage
     imageView.kf.setImage(with: URL(string: model.image.fullUrl)) { [weak self] result in
       if let image = result.value?.image {

@@ -14,38 +14,36 @@ class SettingsManager {
   
   private enum Keys: String {
     case blurModeValue = "ru.mskr.wallpaperapp.blurModeValue"
-    case cropModeValue = "ru.mskr.wallpaperapp.cropModeValue"
   }
   
-  var blurMode: BlurMode {
+  var blurMode: BlurMode? {
     get {
-      return BlurMode(rawValue: UserDefaults.standard.value(forKey: Keys.blurModeValue.rawValue) as? String ?? "") ?? .gaussian
+      return BlurMode(rawValue: UserDefaults.standard.value(forKey: Keys.blurModeValue.rawValue) as? Int ?? 0) ?? .gaussian
     }
     set {
-      UserDefaults.standard.set(newValue.rawValue, forKey: Keys.blurModeValue.rawValue)
-    }
-  }
-  
-  var cropMode: CropMode {
-    get {
-      return CropMode(rawValue: UserDefaults.standard.value(forKey: Keys.cropModeValue.rawValue) as? Int ?? 0) ?? .dontCrop
-    }
-    set {
-      UserDefaults.standard.set(newValue.rawValue, forKey: Keys.cropModeValue.rawValue)
+      UserDefaults.standard.set((newValue ?? .gaussian).rawValue, forKey: Keys.blurModeValue.rawValue)
     }
   }
 }
 
 extension SettingsManager {
-  enum BlurMode: String {
-    case gaussian = "CIGaussianBlur"
-    case disk = "CIDiskBlur"
-    case box = "CIBoxBlur"
-    case motion = "CIMotionBlur"
-  }
-  
-  enum CropMode: Int {
-    case crop = 1
-    case dontCrop = 2
+  enum BlurMode: Int {
+    case gaussian = 0
+    case disc = 1
+    case box = 2
+    case motion = 3
+    
+    var filterName: String {
+      switch self {
+      case .gaussian:
+        return "CIGaussianBlur"
+      case .disc:
+        return "CIDiscBlur"
+      case .box:
+        return "CIBoxBlur"
+      case .motion:
+        return "CIMotionBlur"
+      }
+    }
   }
 }
