@@ -16,6 +16,7 @@
 		0C374B2C2214955100127F80 /* CategoryCollectionCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C374B2B2214955100127F80 /* CategoryCollectionCellViewModel.swift */; };
 		0C374B2E221499EF00127F80 /* CategoriesCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C374B2D221499EF00127F80 /* CategoriesCollectionViewLayout.swift */; };
 		0C374B3022149BFE00127F80 /* WallpaperCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C374B2F22149BFE00127F80 /* WallpaperCategory.swift */; };
+		0C52F4D52223E4310065CF17 /* UIDevice+Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C52F4D42223E4310065CF17 /* UIDevice+Model.swift */; };
 		0C8010352214130300CB4AD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8010342214130300CB4AD2 /* AppDelegate.swift */; };
 		0C80103C2214130500CB4AD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C80103B2214130500CB4AD2 /* Assets.xcassets */; };
 		0C80103F2214130500CB4AD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C80103D2214130500CB4AD2 /* LaunchScreen.storyboard */; };
@@ -45,6 +46,7 @@
 		0C374B2B2214955100127F80 /* CategoryCollectionCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionCellViewModel.swift; sourceTree = "<group>"; };
 		0C374B2D221499EF00127F80 /* CategoriesCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewLayout.swift; sourceTree = "<group>"; };
 		0C374B2F22149BFE00127F80 /* WallpaperCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpaperCategory.swift; sourceTree = "<group>"; };
+		0C52F4D42223E4310065CF17 /* UIDevice+Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Model.swift"; sourceTree = "<group>"; };
 		0C8010312214130300CB4AD2 /* wallpaperapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wallpaperapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C8010342214130300CB4AD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C80103B2214130500CB4AD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				0C801053221419D200CB4AD2 /* UIViewController+Alerts.swift */,
+				0C52F4D42223E4310065CF17 /* UIDevice+Model.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				0CA6C41F2215921D000CE1F3 /* ImageDetailedViewModel.swift in Sources */,
 				0C8C31BF221FE005001EF5BC /* SettingsManager.swift in Sources */,
 				0C2D36E322145C64006901AA /* ImageTableCellViewModel.swift in Sources */,
+				0C52F4D52223E4310065CF17 /* UIDevice+Model.swift in Sources */,
 				0C374B2C2214955100127F80 /* CategoryCollectionCellViewModel.swift in Sources */,
 				0C374B2E221499EF00127F80 /* CategoriesCollectionViewLayout.swift in Sources */,
 				0C8010662214319500CB4AD2 /* APIManager.swift in Sources */,

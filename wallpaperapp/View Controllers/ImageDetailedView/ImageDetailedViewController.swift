@@ -145,7 +145,8 @@ class ImageDetailedViewController: UIViewController {
   }
   
   private func setupContent() {
-    iconsImageView.image = #imageLiteral(resourceName: "icons_x")
+    print(UIDevice.current.type.rawValue)
+    iconsImageView.image = UIDevice.current.type.iconsImage
     imageView.kf.setImage(with: URL(string: model.image.fullUrl)) { [weak self] result in
       if let image = result.value?.image {
         self?.model.image.image = image
