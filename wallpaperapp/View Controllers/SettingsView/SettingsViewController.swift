@@ -10,9 +10,16 @@ import UIKit
 
 class SettingsViewController: UIViewController {
   
+  private weak var blurModeLabel: UILabel!
+  private weak var blurModeSelector: UISegmentedControl!
+  private weak var cropModeLabel: UILabel!
+  private weak var cropModeSelector: UISegmentedControl!
+  
   private let model = SettingsViewModel()
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    
   }
 }

@@ -13,5 +13,5 @@ Simple open-sourced wallpaper app for iOS
 - [ ] Settings (blur mode, crop mode)
 - [X] Pagination (through API response)
 - [ ] Nice UI
-- [ ] Icon
+- [X] Icon
 - [ ] Uploading to App Store (not 100% sure yet)

@@ -29,6 +29,7 @@
 		0C8010612214212600CB4AD2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8010602214212600CB4AD2 /* SettingsViewController.swift */; };
 		0C8010632214213200CB4AD2 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8010622214213200CB4AD2 /* SettingsViewModel.swift */; };
 		0C8010662214319500CB4AD2 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8010652214319500CB4AD2 /* APIManager.swift */; };
+		0C8C31BF221FE005001EF5BC /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8C31BE221FE005001EF5BC /* SettingsManager.swift */; };
 		0CA6C41D22159213000CE1F3 /* ImageDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA6C41C22159213000CE1F3 /* ImageDetailedViewController.swift */; };
 		0CA6C41F2215921D000CE1F3 /* ImageDetailedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA6C41E2215921D000CE1F3 /* ImageDetailedViewModel.swift */; };
 		983B90EED50D0857D8C0AD92 /* Pods_wallpaperapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 755D933F349575DFAF442398 /* Pods_wallpaperapp.framework */; };
@@ -59,6 +60,7 @@
 		0C8010602214212600CB4AD2 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		0C8010622214213200CB4AD2 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		0C8010652214319500CB4AD2 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		0C8C31BE221FE005001EF5BC /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
 		0CA6C41C22159213000CE1F3 /* ImageDetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailedViewController.swift; sourceTree = "<group>"; };
 		0CA6C41E2215921D000CE1F3 /* ImageDetailedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailedViewModel.swift; sourceTree = "<group>"; };
 		755D933F349575DFAF442398 /* Pods_wallpaperapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wallpaperapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -210,6 +212,7 @@
 		0C8010642214318400CB4AD2 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				0C8C31BE221FE005001EF5BC /* SettingsManager.swift */,
 				0C8010652214319500CB4AD2 /* APIManager.swift */,
 				0C2D36D8221452A1006901AA /* APIManager+Credentials.swift */,
 			);
@@ -391,6 +394,7 @@
 				0C80104C2214172C00CB4AD2 /* RootTabBarViewModel.swift in Sources */,
 				0C8010612214212600CB4AD2 /* SettingsViewController.swift in Sources */,
 				0CA6C41F2215921D000CE1F3 /* ImageDetailedViewModel.swift in Sources */,
+				0C8C31BF221FE005001EF5BC /* SettingsManager.swift in Sources */,
 				0C2D36E322145C64006901AA /* ImageTableCellViewModel.swift in Sources */,
 				0C374B2C2214955100127F80 /* CategoryCollectionCellViewModel.swift in Sources */,
 				0C374B2E221499EF00127F80 /* CategoriesCollectionViewLayout.swift in Sources */,
