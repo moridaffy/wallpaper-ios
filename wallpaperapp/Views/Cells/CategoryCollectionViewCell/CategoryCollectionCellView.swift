@@ -32,9 +32,10 @@ class CategoryCollectionCellView: UICollectionViewCell {
   }
   
   private func setupUI() {
+    let lightTheme = SettingsManager.shared.themeMode.value == .normal
     let shadowView = UIView()
     shadowView.layer.masksToBounds = false
-    shadowView.layer.shadowColor = UIColor.black.cgColor
+    shadowView.layer.shadowColor = lightTheme ? UIColor.black.cgColor : UIColor.white.cgColor
     shadowView.layer.shadowOffset = CGSize.zero
     shadowView.layer.shadowOpacity = 0.25
     shadowView.layer.shadowRadius = 10.0

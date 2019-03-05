@@ -22,11 +22,17 @@ class CategoriesViewController: UIViewController {
     setupConstraints()
   }
   
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    collectionView.backgroundColor = (SettingsManager.shared.themeMode.value == .normal) ? UIColor.white : UIColor.black
+  }
+  
   override func viewDidAppear(_ animated: Bool) {
     collectionView.reloadData()
   }
   
   private func setupUI() {
+    title = NSLocalizedString("Categories", comment: "")
     let collectionView = UICollectionView(frame: view.frame, collectionViewLayout: CategoriesCollectionViewLayout())
     collectionView.backgroundColor = UIColor.white
     view.addSubview(collectionView)

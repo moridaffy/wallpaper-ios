@@ -6,23 +6,41 @@
 //  Copyright © 2019 MSKR. All rights reserved.
 //
 
-import Foundation
+import RxSwift
 
 class SettingsManager {
   
-  static let shared = SettingsManager()
+  static let shared: SettingsManager = {
+    let manager = SettingsManager()
+    manager.blurMode.value = BlurMode(rawValue: UserDefaults.standard.value(forKey: Keys.blurModeValue.rawValue) as? Int ?? 0) ?? .gaussian
+    manager.themeMode.value = ThemeMode(rawValue: UserDefaults.standard.value(forKey: Keys.themeModeValue.rawValue) as? Int ?? 0) ?? .normal
+    manager.bindData()
+    return manager
+  }()
   
   private enum Keys: String {
     case blurModeValue = "ru.mskr.wallpaperapp.blurModeValue"
+    case themeModeValue = "ru.mskr.wallpaperapp.ThemeModeValue"
   }
   
-  var blurMode: BlurMode? {
-    get {
-      return BlurMode(rawValue: UserDefaults.standard.value(forKey: Keys.blurModeValue.rawValue) as? Int ?? 0) ?? .gaussian
-    }
-    set {
-      UserDefaults.standard.set((newValue ?? .gaussian).rawValue, forKey: Keys.blurModeValue.rawValue)
-    }
+  private let disposeBag = DisposeBag()
+  
+  let demoMode: Bool = true
+  let blurMode = Variable(nil as BlurMode?)
+  let themeMode = Variable(nil as ThemeMode?)
+  
+  func bindData() {
+    blurMode.asObservable()
+      .skip(1)
+      .subscribe(onNext: { (value) in
+        UserDefaults.standard.set((value ?? .gaussian).rawValue, forKey: Keys.blurModeValue.rawValue)
+      }).disposed(by: disposeBag)
+    
+    themeMode.asObservable()
+      .skip(1)
+      .subscribe(onNext: { (value) in
+        UserDefaults.standard.set((value ?? .normal).rawValue, forKey: Keys.themeModeValue.rawValue)
+      }).disposed(by: disposeBag)
   }
 }
 
@@ -45,5 +63,10 @@ extension SettingsManager {
         return "CIMotionBlur"
       }
     }
+  }
+  
+  enum ThemeMode: Int {
+    case normal = 0
+    case dark = 1
   }
 }

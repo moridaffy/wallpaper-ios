@@ -6,16 +6,19 @@
 //  Copyright © 2019 MSKR. All rights reserved.
 //
 
-import UIKit
+import RxSwift
 
 class RootTabBarViewController: UITabBarController {
   
+  private let disposeBag = DisposeBag()
   private let model = RootTabBarViewModel()
     
   override func viewDidLoad() {
     super.viewDidLoad()
     
     setupViewControllers()
+    setupTabBar()
+    bindData()
   }
   
   private func setupViewControllers() {
@@ -31,6 +34,24 @@ class RootTabBarViewController: UITabBarController {
     settingsViewController.tabBarItem = UITabBarItem(title: NSLocalizedString("Settings", comment: ""), image: nil, tag: 3)
     
     viewControllers = [featuredViewController, categoriesViewController, settingsViewController]
+  }
+  
+  private func setupTabBar() {
+    tabBar.isOpaque = false
+  }
+  
+  private func bindData() {
+    SettingsManager.shared.themeMode.asObservable()
+      .subscribe { [weak self] (event) in
+        if let themeMode = event.element {
+          switch themeMode ?? .normal {
+          case .normal:
+            self?.tabBar.barTintColor = UIColor.white
+          case .dark:
+            self?.tabBar.barTintColor = UIColor.black
+          }
+        }
+      }.disposed(by: disposeBag)
   }
     
 }

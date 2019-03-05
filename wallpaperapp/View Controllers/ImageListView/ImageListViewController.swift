@@ -27,11 +27,17 @@ class ImageListViewController: UIViewController {
     setupReactive()
   }
   
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    tableView.backgroundColor = (SettingsManager.shared.themeMode.value == .normal) ? UIColor.white : UIColor.black
+  }
+  
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     
-    // TODO: uncomment to enable automatic image loading
-//    pullToRefresh()
+    if !SettingsManager.shared.demoMode {
+      pullToRefresh()
+    }
   }
   
   func setup(title: String?, model: ImageListViewModel = ImageListViewModel()) {
@@ -59,6 +65,8 @@ class ImageListViewController: UIViewController {
     tableView.refreshControl = refresher
     self.refresher = refresher
     
+    tableView.tableFooterView = UIView()
+    tableView.separatorStyle = .none
     tableView.delegate = self
     tableView.register(ImageTableCellView.self, forCellReuseIdentifier: "ImageTableCell")
   }

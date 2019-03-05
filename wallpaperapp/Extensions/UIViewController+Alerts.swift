@@ -11,7 +11,7 @@ import UIKit
 extension UIViewController {
   
   func embedInNavigationController() -> UINavigationController {
-    return UINavigationController(rootViewController: self)
+    return ThemedNavigationController(rootViewController: self)
   }
   
   func showAlert(title: String?, body: String?, button: String?, actions: [UIAlertAction]?) {

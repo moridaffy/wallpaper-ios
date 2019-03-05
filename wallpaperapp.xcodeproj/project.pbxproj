@@ -33,6 +33,7 @@
 		0C8C31BF221FE005001EF5BC /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8C31BE221FE005001EF5BC /* SettingsManager.swift */; };
 		0CA6C41D22159213000CE1F3 /* ImageDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA6C41C22159213000CE1F3 /* ImageDetailedViewController.swift */; };
 		0CA6C41F2215921D000CE1F3 /* ImageDetailedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA6C41E2215921D000CE1F3 /* ImageDetailedViewModel.swift */; };
+		0CF44F2B22251D5D0049CC2A /* ThemedNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF44F2A22251D5D0049CC2A /* ThemedNavigationController.swift */; };
 		983B90EED50D0857D8C0AD92 /* Pods_wallpaperapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 755D933F349575DFAF442398 /* Pods_wallpaperapp.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,7 @@
 		0C8C31BE221FE005001EF5BC /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
 		0CA6C41C22159213000CE1F3 /* ImageDetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailedViewController.swift; sourceTree = "<group>"; };
 		0CA6C41E2215921D000CE1F3 /* ImageDetailedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailedViewModel.swift; sourceTree = "<group>"; };
+		0CF44F2A22251D5D0049CC2A /* ThemedNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemedNavigationController.swift; sourceTree = "<group>"; };
 		755D933F349575DFAF442398 /* Pods_wallpaperapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wallpaperapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92A344CE975F32BBAEC96DE3 /* Pods-wallpaperapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wallpaperapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-wallpaperapp/Pods-wallpaperapp.release.xcconfig"; sourceTree = "<group>"; };
 		C41D526A99862C7F0EC235AC /* Pods-wallpaperapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wallpaperapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wallpaperapp/Pods-wallpaperapp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 		0C801046221416F300CB4AD2 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0CF44F2922251D430049CC2A /* ThemedNavigationControllerView */,
 				0C8010482214171100CB4AD2 /* RootTabBarView */,
 				0C80105722141A3A00CB4AD2 /* ImageListView */,
 				0CA6C41B22158B47000CE1F3 /* ImageDetailedView */,
@@ -238,6 +241,14 @@
 				0CA6C41E2215921D000CE1F3 /* ImageDetailedViewModel.swift */,
 			);
 			path = ImageDetailedView;
+			sourceTree = "<group>";
+		};
+		0CF44F2922251D430049CC2A /* ThemedNavigationControllerView */ = {
+			isa = PBXGroup;
+			children = (
+				0CF44F2A22251D5D0049CC2A /* ThemedNavigationController.swift */,
+			);
+			path = ThemedNavigationControllerView;
 			sourceTree = "<group>";
 		};
 		43BFE3AEDD85FC25F318B5A2 /* Pods */ = {
@@ -400,6 +411,7 @@
 				0C8C31BF221FE005001EF5BC /* SettingsManager.swift in Sources */,
 				0C2D36E322145C64006901AA /* ImageTableCellViewModel.swift in Sources */,
 				0C52F4D52223E4310065CF17 /* UIDevice+Model.swift in Sources */,
+				0CF44F2B22251D5D0049CC2A /* ThemedNavigationController.swift in Sources */,
 				0C374B2C2214955100127F80 /* CategoryCollectionCellViewModel.swift in Sources */,
 				0C374B2E221499EF00127F80 /* CategoriesCollectionViewLayout.swift in Sources */,
 				0C8010662214319500CB4AD2 /* APIManager.swift in Sources */,

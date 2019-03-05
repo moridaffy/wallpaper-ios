@@ -69,7 +69,7 @@ class ImageDetailedViewController: UIViewController {
        let fullImage = model.image.image,
        let fullCIImage = CIImage(image: fullImage) {
       
-      let blurFilter = CIFilter(name: (SettingsManager.shared.blurMode ?? .gaussian).filterName,
+      let blurFilter = CIFilter(name: (SettingsManager.shared.blurMode.value ?? .gaussian).filterName,
                                 parameters: [kCIInputImageKey: fullCIImage.clampedToExtent(),
                                              kCIInputRadiusKey: slider.value * 25.0])
       if let outputCIImage = blurFilter?.outputImage?.cropped(to: fullCIImage.extent) {

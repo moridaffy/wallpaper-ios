@@ -76,6 +76,7 @@ class ImageTableCellView: UITableViewCell {
     self.likesLabel = likesLabel
     
     selectionStyle = .none
+    backgroundColor = UIColor.clear
     layer.masksToBounds = true
   }
   
