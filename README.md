@@ -12,7 +12,7 @@ Simple open-sourced wallpaper app for iOS
 - [X] Dark mode
 - [X] Settings (blur mode, cache size)
 - [X] Pagination (through API response)
-- [ ] Nice UI
+- [X] Nice UI
 - [X] Icon
 - [ ] Uploading to App Store (not 100% sure yet)
 - [ ] Marzipan support (run app on macOS)

@@ -16,7 +16,7 @@ class APIManager {
   
   class func loadImages(search: String?, page: Int = 1, completion result: @escaping (SearchCodable?, Error?) -> Void) {
     // Constructing and checking request url
-    var urlString = URLs.baseUrl + pixabayApiKey
+    var urlString = URLs.baseUrl + pixabayApiKey + "&min_width=750&min_height=1334"
     if let search = search {
       urlString += "&q=\(search)"
     } else {

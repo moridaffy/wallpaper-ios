@@ -28,6 +28,12 @@ class ImageDetailedViewController: UIViewController {
     setupContent()
   }
   
+  override func viewDidLayoutSubviews() {
+    super.viewDidLayoutSubviews()
+    iconsButton.layer.cornerRadius = iconsButton.frame.height / 2
+    iconsButton.layer.masksToBounds = true
+  }
+  
   override var prefersStatusBarHidden: Bool {
     return model.elementsHidden
   }
@@ -110,7 +116,10 @@ class ImageDetailedViewController: UIViewController {
     self.blurSlider = blurSlider
     
     let iconsButton = UIButton()
-    iconsButton.backgroundColor = UIColor.white
+    iconsButton.backgroundColor = (SettingsManager.shared.themeMode.value == .normal) ? UIColor.white : UIColor.black
+    iconsButton.tintColor = (SettingsManager.shared.themeMode.value == .normal) ? UIColor.black : UIColor.white
+    iconsButton.setImage(#imageLiteral(resourceName: "icon_icons").withRenderingMode(.alwaysTemplate), for: .normal)
+    iconsButton.imageEdgeInsets = UIEdgeInsets(top: 4.0, left: 4.0, bottom: 4.0, right: 4.0)
     iconsButton.addTarget(self, action: #selector(iconsButtonTapped), for: .touchUpInside)
     view.addSubview(iconsButton)
     self.iconsButton = iconsButton
