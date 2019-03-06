@@ -16,6 +16,12 @@
 		0C374B2C2214955100127F80 /* CategoryCollectionCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C374B2B2214955100127F80 /* CategoryCollectionCellViewModel.swift */; };
 		0C374B2E221499EF00127F80 /* CategoriesCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C374B2D221499EF00127F80 /* CategoriesCollectionViewLayout.swift */; };
 		0C374B3022149BFE00127F80 /* WallpaperCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C374B2F22149BFE00127F80 /* WallpaperCategory.swift */; };
+		0C4A888A222FFD5C00965510 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4A8889222FFD5C00965510 /* AppDelegate.swift */; };
+		0C4A888C222FFD5C00965510 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4A888B222FFD5C00965510 /* ViewController.swift */; };
+		0C4A888F222FFD5C00965510 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C4A888D222FFD5C00965510 /* Main.storyboard */; };
+		0C4A8891222FFD5D00965510 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C4A8890222FFD5D00965510 /* Assets.xcassets */; };
+		0C4A8894222FFD5D00965510 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C4A8892222FFD5D00965510 /* LaunchScreen.storyboard */; };
+		0C4A88A02230016400965510 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0C4A88A22230016400965510 /* Localizable.strings */; };
 		0C52F4D52223E4310065CF17 /* UIDevice+Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C52F4D42223E4310065CF17 /* UIDevice+Model.swift */; };
 		0C8010352214130300CB4AD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8010342214130300CB4AD2 /* AppDelegate.swift */; };
 		0C80103C2214130500CB4AD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C80103B2214130500CB4AD2 /* Assets.xcassets */; };
@@ -47,6 +53,17 @@
 		0C374B2B2214955100127F80 /* CategoryCollectionCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionCellViewModel.swift; sourceTree = "<group>"; };
 		0C374B2D221499EF00127F80 /* CategoriesCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewLayout.swift; sourceTree = "<group>"; };
 		0C374B2F22149BFE00127F80 /* WallpaperCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpaperCategory.swift; sourceTree = "<group>"; };
+		0C4A8887222FFD5C00965510 /* wallpapermac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wallpapermac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C4A8889222FFD5C00965510 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0C4A888B222FFD5C00965510 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0C4A888E222FFD5C00965510 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0C4A8890222FFD5D00965510 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0C4A8893222FFD5D00965510 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0C4A8895222FFD5D00965510 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C4A889D2230014700965510 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		0C4A889F2230014800965510 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		0C4A88A12230016400965510 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0C4A88A32230016600965510 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0C52F4D42223E4310065CF17 /* UIDevice+Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Model.swift"; sourceTree = "<group>"; };
 		0C8010312214130300CB4AD2 /* wallpaperapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wallpaperapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C8010342214130300CB4AD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +90,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0C4A8884222FFD5C00965510 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0C80102E2214130300CB4AD2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -120,10 +144,24 @@
 			path = CategoryCollectionViewCell;
 			sourceTree = "<group>";
 		};
+		0C4A8888222FFD5C00965510 /* wallpapermac */ = {
+			isa = PBXGroup;
+			children = (
+				0C4A8889222FFD5C00965510 /* AppDelegate.swift */,
+				0C4A888B222FFD5C00965510 /* ViewController.swift */,
+				0C4A888D222FFD5C00965510 /* Main.storyboard */,
+				0C4A8890222FFD5D00965510 /* Assets.xcassets */,
+				0C4A8892222FFD5D00965510 /* LaunchScreen.storyboard */,
+				0C4A8895222FFD5D00965510 /* Info.plist */,
+			);
+			path = wallpapermac;
+			sourceTree = "<group>";
+		};
 		0C8010282214130300CB4AD2 = {
 			isa = PBXGroup;
 			children = (
 				0C8010332214130300CB4AD2 /* wallpaperapp */,
+				0C4A8888222FFD5C00965510 /* wallpapermac */,
 				0C8010322214130300CB4AD2 /* Products */,
 				43BFE3AEDD85FC25F318B5A2 /* Pods */,
 				E36B1FEA26F1482821DE00B2 /* Frameworks */,
@@ -136,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				0C8010312214130300CB4AD2 /* wallpaperapp.app */,
+				0C4A8887222FFD5C00965510 /* wallpapermac.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -150,6 +189,7 @@
 				0C2D36DA221454F3006901AA /* Models */,
 				0C801052221419A500CB4AD2 /* Extensions */,
 				0C80103B2214130500CB4AD2 /* Assets.xcassets */,
+				0C4A88A22230016400965510 /* Localizable.strings */,
 				0C80103D2214130500CB4AD2 /* LaunchScreen.storyboard */,
 				0C8010402214130500CB4AD2 /* Info.plist */,
 			);
@@ -271,6 +311,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0C4A8886222FFD5C00965510 /* wallpapermac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C4A8899222FFD5D00965510 /* Build configuration list for PBXNativeTarget "wallpapermac" */;
+			buildPhases = (
+				0C4A8883222FFD5C00965510 /* Sources */,
+				0C4A8884222FFD5C00965510 /* Frameworks */,
+				0C4A8885222FFD5C00965510 /* Resources */,
+				0C4A889A222FFDB900965510 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = wallpapermac;
+			productName = wallpapermac;
+			productReference = 0C4A8887222FFD5C00965510 /* wallpapermac.app */;
+			productType = "com.apple.product-type.application";
+		};
 		0C8010302214130300CB4AD2 /* wallpaperapp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0C8010432214130500CB4AD2 /* Build configuration list for PBXNativeTarget "wallpaperapp" */;
@@ -300,6 +358,9 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = MSKR;
 				TargetAttributes = {
+					0C4A8886222FFD5C00965510 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					0C8010302214130300CB4AD2 = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -312,6 +373,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 0C8010282214130300CB4AD2;
 			productRefGroup = 0C8010322214130300CB4AD2 /* Products */;
@@ -319,16 +381,28 @@
 			projectRoot = "";
 			targets = (
 				0C8010302214130300CB4AD2 /* wallpaperapp */,
+				0C4A8886222FFD5C00965510 /* wallpapermac */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0C4A8885222FFD5C00965510 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C4A8894222FFD5D00965510 /* LaunchScreen.storyboard in Resources */,
+				0C4A8891222FFD5D00965510 /* Assets.xcassets in Resources */,
+				0C4A888F222FFD5C00965510 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0C80102F2214130300CB4AD2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				0C80103F2214130500CB4AD2 /* LaunchScreen.storyboard in Resources */,
+				0C4A88A02230016400965510 /* Localizable.strings in Resources */,
 				0C80103C2214130500CB4AD2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,6 +410,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0C4A889A222FFDB900965510 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"${CONFIGURATION}\" = \"Marzipan\" ]; then\ncd /Users/m/Documents/GitHub/wallpaper-ios/marzipanify\nrm -rf wallpapermac.app\nrm -rf Entitlements-*.plist\ncp -f -R ${BUILT_PRODUCTS_DIR}/wallpapermac.app /Users/m/Documents/GitHub/wallpaper-ios/marzipanify\n./marzipanify wallpapermac.app\nfi\n";
+		};
 		697CBA0F07942DA8EFFEB907 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -397,6 +488,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0C4A8883222FFD5C00965510 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C4A888C222FFD5C00965510 /* ViewController.swift in Sources */,
+				0C4A888A222FFD5C00965510 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0C80102D2214130300CB4AD2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -432,10 +532,37 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		0C4A888D222FFD5C00965510 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0C4A888E222FFD5C00965510 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0C4A8892222FFD5D00965510 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0C4A8893222FFD5D00965510 /* Base */,
+				0C4A889F2230014800965510 /* ru */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		0C4A88A22230016400965510 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0C4A88A12230016400965510 /* en */,
+				0C4A88A32230016600965510 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		0C80103D2214130500CB4AD2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				0C80103E2214130500CB4AD2 /* Base */,
+				0C4A889D2230014700965510 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -443,10 +570,147 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0C4A8896222FFD5D00965510 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GCD2MCUEP4;
+				INFOPLIST_FILE = wallpapermac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.mskr.wallpapermac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0C4A8897222FFD5D00965510 /* Marzipan */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GCD2MCUEP4;
+				INFOPLIST_FILE = wallpapermac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.mskr.wallpapermac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Marzipan;
+		};
+		0C4A8898222FFD5D00965510 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GCD2MCUEP4;
+				INFOPLIST_FILE = wallpapermac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.mskr.wallpapermac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0C71387B222FD6B20095FB1A /* Marzipan */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Marzipan;
+		};
+		0C71387C222FD6B20095FB1A /* Marzipan */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C41D526A99862C7F0EC235AC /* Pods-wallpaperapp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GCD2MCUEP4;
+				INFOPLIST_FILE = wallpaperapp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.mskr.wallpaperapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Marzipan;
+		};
 		0C8010412214130500CB4AD2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -508,6 +772,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -567,7 +832,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GCD2MCUEP4;
 				INFOPLIST_FILE = wallpaperapp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -587,7 +852,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GCD2MCUEP4;
 				INFOPLIST_FILE = wallpaperapp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -602,10 +867,21 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0C4A8899222FFD5D00965510 /* Build configuration list for PBXNativeTarget "wallpapermac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C4A8896222FFD5D00965510 /* Debug */,
+				0C4A8897222FFD5D00965510 /* Marzipan */,
+				0C4A8898222FFD5D00965510 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		0C80102C2214130300CB4AD2 /* Build configuration list for PBXProject "wallpaperapp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0C8010412214130500CB4AD2 /* Debug */,
+				0C71387B222FD6B20095FB1A /* Marzipan */,
 				0C8010422214130500CB4AD2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -615,6 +891,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0C8010442214130500CB4AD2 /* Debug */,
+				0C71387C222FD6B20095FB1A /* Marzipan */,
 				0C8010452214130500CB4AD2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;

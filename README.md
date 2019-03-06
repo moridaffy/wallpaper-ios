@@ -6,7 +6,7 @@ Simple open-sourced wallpaper app for iOS
 - [X] Save images to photo library
 - [X] Categories
 - [ ] Proper Readme
-- [ ] Full Russian and English localization
+- [X] Full Russian and English localization
 - [X] Apply blur to wallpapers before saving them
 - [X] Preview image as wallpaper (show demo icons on top of the wallpaper)
 - [X] Dark mode
@@ -15,3 +15,4 @@ Simple open-sourced wallpaper app for iOS
 - [ ] Nice UI
 - [X] Icon
 - [ ] Uploading to App Store (not 100% sure yet)
+- [ ] Marzipan support (run app on macOS)

@@ -103,10 +103,10 @@ class SettingsViewController: UIViewController {
     title = NSLocalizedString("Settings", comment: "")
     
     blurModeLabel.text = NSLocalizedString("Blur mode", comment: "")
-    blurModeSelector.insertSegment(withTitle: "Motion", at: 0, animated: false)
-    blurModeSelector.insertSegment(withTitle: "Box", at: 0, animated: false)
-    blurModeSelector.insertSegment(withTitle: "Disc", at: 0, animated: false)
-    blurModeSelector.insertSegment(withTitle: "Gaussian", at: 0, animated: false)
+    blurModeSelector.insertSegment(withTitle: NSLocalizedString("Motion", comment: ""), at: 0, animated: false)
+    blurModeSelector.insertSegment(withTitle: NSLocalizedString("Box", comment: ""), at: 0, animated: false)
+    blurModeSelector.insertSegment(withTitle: NSLocalizedString("Disc", comment: ""), at: 0, animated: false)
+    blurModeSelector.insertSegment(withTitle: NSLocalizedString("Gaussian", comment: ""), at: 0, animated: false)
     blurModeSelector.selectedSegmentIndex = SettingsManager.shared.blurMode.value?.rawValue ?? 0
     blurModeSelector.rx.value
       .skip(1)
@@ -115,8 +115,8 @@ class SettingsViewController: UIViewController {
       }).disposed(by: disposeBag)
     
     themeModeLabel.text = NSLocalizedString("Theme mode", comment: "")
-    themeModeSelector.insertSegment(withTitle: "Dark", at: 0, animated: false)
-    themeModeSelector.insertSegment(withTitle: "Normal", at: 0, animated: false)
+    themeModeSelector.insertSegment(withTitle: NSLocalizedString("Dark", comment: ""), at: 0, animated: false)
+    themeModeSelector.insertSegment(withTitle: NSLocalizedString("Normal", comment: ""), at: 0, animated: false)
     themeModeSelector.selectedSegmentIndex = SettingsManager.shared.themeMode.value?.rawValue ?? 0
     themeModeSelector.rx.value
       .skip(1)

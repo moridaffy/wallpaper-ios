@@ -1,0 +1,38 @@
+/* 
+  Localizable.strings
+  wallpaperapp
+
+  Created by Максим Скрябин on 06/03/2019.
+  Copyright © 2019 MSKR. All rights reserved.
+*/
+
+"Featured" = "Featured";
+"Categories" = "Categories";
+"Settings" = "Settings";
+
+"Cars" = "Cars";
+"Animals" = "Animals";
+"Abstract" = "Abstract";
+"Nature" = "Nature";
+"Cities" = "Cities";
+"Food" = "Food";
+"Fashion" = "Fashion";
+"Sport" = "Sport";
+"Music" = "Music";
+
+"Gaussian" = "Gaussian";
+"Disc" = "Disc";
+"Box" = "Box";
+"Motion" = "Motion";
+"Normal" = "Normal";
+"Dark" = "Dark";
+
+"Blur mode" = "Blur mode";
+"Theme mode" = "Theme mode";
+"Cache size" = "Cache size";
+"Calculating" = "Calculating";
+"Clear cache" = "Clear cache";
+
+"Close" = "Close";
+"Save" = "Save";
+"Unknown error" = "Unknown error";
