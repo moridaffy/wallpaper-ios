@@ -14,6 +14,11 @@ class APIManager {
     static let baseUrl: String = "https://pixabay.com/api/?key="
   }
   
+  class var pixabayApiKey: String {
+    // Your Pixabay API key should go here
+    return hiddenApiKey
+  }
+  
   class func loadImages(search: String?, page: Int = 1, completion result: @escaping (SearchCodable?, Error?) -> Void) {
     // Constructing and checking request url
     var urlString = URLs.baseUrl + pixabayApiKey + "&min_width=750&min_height=1334"
