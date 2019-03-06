@@ -29,14 +29,15 @@
 * Full Russian and English localization
 
 ## TODO
-[ ] Marzipan support (run app on macOS)
-[ ] Add another image source (for example Unsplash)
-[ ] Upload to App Store (not 100% sure yet)
+- [ ] Marzipan support (run app on macOS)
+- [ ] Add another image source (for example Unsplash)
+- [ ] Upload to App Store (not 100% sure yet)
 
 ## How to install
 ### iOS App
 * Install pods using ```pod install```
 * Open the project using ```.xcworkspace``` file
+* Setup signing with your Apple ID
 * Provide your own <a href="https://pixabay.com/api/docs/">Pixabay</a> API key in ```APIManager.swift``` file (line 19)
 ### macOS Apply
 * Not sure yet :)
