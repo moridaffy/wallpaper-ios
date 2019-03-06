@@ -233,6 +233,13 @@
       "idiom" : "watch-marketing",
       "filename" : "watch-marketing.png",
       "scale" : "1x"
+    },
+    {
+      "size" : "1024x1024",
+      "idiom" : "ios-marketing",
+      "filename" : "ios-marketing.png",
+      "unassigned" : true,
+      "scale" : "1x"
     }
   ],
   "info" : {
