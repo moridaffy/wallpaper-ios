@@ -49,7 +49,7 @@
 * Open the project using ```.xcworkspace``` file
 * Setup signing with your Apple ID
 * Provide your own <a href="https://pixabay.com/api/docs/">Pixabay</a> API key in ```APIManager.swift``` file (line 19)
-### macOS Apply
+### macOS App
 * Not sure yet :)
 
 ## Developer
