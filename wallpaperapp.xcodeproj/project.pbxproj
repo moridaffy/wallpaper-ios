@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C2D36D9221452A1006901AA /* APIManager+Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2D36D8221452A1006901AA /* APIManager+Credentials.swift */; };
 		0C2D36DC2214550E006901AA /* Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2D36DB2214550E006901AA /* Codable.swift */; };
 		0C2D36E122145C5D006901AA /* ImageTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2D36E022145C5D006901AA /* ImageTableCellView.swift */; };
 		0C2D36E322145C64006901AA /* ImageTableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2D36E222145C64006901AA /* ImageTableCellViewModel.swift */; };
@@ -35,16 +34,73 @@
 		0C80105F2214211B00CB4AD2 /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C80105E2214211B00CB4AD2 /* CategoriesViewModel.swift */; };
 		0C8010612214212600CB4AD2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8010602214212600CB4AD2 /* SettingsViewController.swift */; };
 		0C8010632214213200CB4AD2 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8010622214213200CB4AD2 /* SettingsViewModel.swift */; };
-		0C8010662214319500CB4AD2 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8010652214319500CB4AD2 /* APIManager.swift */; };
 		0C8C31BF221FE005001EF5BC /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8C31BE221FE005001EF5BC /* SettingsManager.swift */; };
 		0CA6C41D22159213000CE1F3 /* ImageDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA6C41C22159213000CE1F3 /* ImageDetailedViewController.swift */; };
 		0CA6C41F2215921D000CE1F3 /* ImageDetailedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA6C41E2215921D000CE1F3 /* ImageDetailedViewModel.swift */; };
+		0CAFC7492231128A00E618C9 /* ListInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAFC7482231128A00E618C9 /* ListInterfaceController.swift */; };
+		0CAFC74A223115EF00E618C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C80103B2214130500CB4AD2 /* Assets.xcassets */; };
+		0CAFC74E223116E800E618C9 /* ListRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAFC74D223116E800E618C9 /* ListRowController.swift */; };
+		0CAFC7562231229200E618C9 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAFC7552231229200E618C9 /* APIManager.swift */; };
+		0CAFC758223122BF00E618C9 /* APIManager+Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAFC757223122BF00E618C9 /* APIManager+Credentials.swift */; };
+		0CAFC7592231272900E618C9 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAFC7552231229200E618C9 /* APIManager.swift */; };
+		0CAFC75A2231275A00E618C9 /* Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2D36DB2214550E006901AA /* Codable.swift */; };
+		0CAFC75B2231276100E618C9 /* APIManager+Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAFC757223122BF00E618C9 /* APIManager+Credentials.swift */; };
+		0CB6B15322314FF500AEF84F /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8C31BE221FE005001EF5BC /* SettingsManager.swift */; };
 		0CF44F2B22251D5D0049CC2A /* ThemedNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF44F2A22251D5D0049CC2A /* ThemedNavigationController.swift */; };
-		983B90EED50D0857D8C0AD92 /* Pods_wallpaperapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 755D933F349575DFAF442398 /* Pods_wallpaperapp.framework */; };
+		0CFF31322230525200E7B7C8 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CFF31302230525200E7B7C8 /* Interface.storyboard */; };
+		0CFF31342230525300E7B7C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CFF31332230525300E7B7C8 /* Assets.xcassets */; };
+		0CFF313B2230525400E7B7C8 /* Watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0CFF313A2230525400E7B7C8 /* Watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0CFF31422230525400E7B7C8 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFF31412230525400E7B7C8 /* ExtensionDelegate.swift */; };
+		0CFF31442230525400E7B7C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CFF31432230525400E7B7C8 /* Assets.xcassets */; };
+		0CFF31482230525400E7B7C8 /* Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 0CFF312E2230525200E7B7C8 /* Watch.app */; };
+		0CFF31542230535100E7B7C8 /* WallpaperImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C374B2622148F4C00127F80 /* WallpaperImage.swift */; };
+		C1018F9B116B1FDBAA3A9412 /* Pods_wallpaperapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7839E3FAADB580A786717175 /* Pods_wallpaperapp.framework */; };
+		ED30C0D7EDE892C16E805C54 /* Pods_Watch_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D11F843782B904F7D2D646A /* Pods_Watch_Extension.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		0CFF313C2230525400E7B7C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C8010292214130300CB4AD2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0CFF31392230525400E7B7C8;
+			remoteInfo = "Watch Extension";
+		};
+		0CFF31462230525400E7B7C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C8010292214130300CB4AD2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0CFF312D2230525200E7B7C8;
+			remoteInfo = Watch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0CFF31502230525400E7B7C8 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0CFF313B2230525400E7B7C8 /* Watch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0CFF31522230525400E7B7C8 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				0CFF31482230525400E7B7C8 /* Watch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		0C2D36D8221452A1006901AA /* APIManager+Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIManager+Credentials.swift"; sourceTree = "<group>"; };
 		0C2D36DB2214550E006901AA /* Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Codable.swift; sourceTree = "<group>"; };
 		0C2D36E022145C5D006901AA /* ImageTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableCellView.swift; sourceTree = "<group>"; };
 		0C2D36E222145C64006901AA /* ImageTableCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableCellViewModel.swift; sourceTree = "<group>"; };
@@ -79,14 +135,31 @@
 		0C80105E2214211B00CB4AD2 /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
 		0C8010602214212600CB4AD2 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		0C8010622214213200CB4AD2 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
-		0C8010652214319500CB4AD2 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		0C8C31BE221FE005001EF5BC /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
 		0CA6C41C22159213000CE1F3 /* ImageDetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailedViewController.swift; sourceTree = "<group>"; };
 		0CA6C41E2215921D000CE1F3 /* ImageDetailedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailedViewModel.swift; sourceTree = "<group>"; };
+		0CAFC7482231128A00E618C9 /* ListInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInterfaceController.swift; sourceTree = "<group>"; };
+		0CAFC74D223116E800E618C9 /* ListRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowController.swift; sourceTree = "<group>"; };
+		0CAFC7552231229200E618C9 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		0CAFC757223122BF00E618C9 /* APIManager+Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIManager+Credentials.swift"; sourceTree = "<group>"; };
 		0CF44F2A22251D5D0049CC2A /* ThemedNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemedNavigationController.swift; sourceTree = "<group>"; };
-		755D933F349575DFAF442398 /* Pods_wallpaperapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wallpaperapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		92A344CE975F32BBAEC96DE3 /* Pods-wallpaperapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wallpaperapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-wallpaperapp/Pods-wallpaperapp.release.xcconfig"; sourceTree = "<group>"; };
-		C41D526A99862C7F0EC235AC /* Pods-wallpaperapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wallpaperapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wallpaperapp/Pods-wallpaperapp.debug.xcconfig"; sourceTree = "<group>"; };
+		0CFF312E2230525200E7B7C8 /* Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Watch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CFF31312230525200E7B7C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		0CFF31332230525300E7B7C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0CFF31352230525300E7B7C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0CFF313A2230525400E7B7C8 /* Watch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Watch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CFF31412230525400E7B7C8 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		0CFF31432230525400E7B7C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0CFF31452230525400E7B7C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BA208003FE5C1C35BC87398 /* Pods-wallpaperapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wallpaperapp.release.xcconfig"; path = "Target Support Files/Pods-wallpaperapp/Pods-wallpaperapp.release.xcconfig"; sourceTree = "<group>"; };
+		7839E3FAADB580A786717175 /* Pods_wallpaperapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wallpaperapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AB5A3059BB0180801A01AE6 /* Pods-Watch Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Watch Extension.release.xcconfig"; path = "Target Support Files/Pods-Watch Extension/Pods-Watch Extension.release.xcconfig"; sourceTree = "<group>"; };
+		8D11F843782B904F7D2D646A /* Pods_Watch_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Watch_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B744FAEBCE17409253A56BA8 /* Pods_Watch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Watch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0790711BB6A91F43FF5EE69 /* Pods-wallpaperapp.marzipan.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wallpaperapp.marzipan.xcconfig"; path = "Target Support Files/Pods-wallpaperapp/Pods-wallpaperapp.marzipan.xcconfig"; sourceTree = "<group>"; };
+		C23F6B7F74007A3A5D77DC03 /* Pods-Watch Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Watch Extension.debug.xcconfig"; path = "Target Support Files/Pods-Watch Extension/Pods-Watch Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		D11F33B0E867F65B92EB043B /* Pods-Watch Extension.marzipan.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Watch Extension.marzipan.xcconfig"; path = "Target Support Files/Pods-Watch Extension/Pods-Watch Extension.marzipan.xcconfig"; sourceTree = "<group>"; };
+		EA577344B7C31DE7D124E498 /* Pods-wallpaperapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wallpaperapp.debug.xcconfig"; path = "Target Support Files/Pods-wallpaperapp/Pods-wallpaperapp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +174,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				983B90EED50D0857D8C0AD92 /* Pods_wallpaperapp.framework in Frameworks */,
+				C1018F9B116B1FDBAA3A9412 /* Pods_wallpaperapp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0CFF31372230525400E7B7C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED30C0D7EDE892C16E805C54 /* Pods_Watch_Extension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F2EDD3B6C20C24A39B15E12 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,10 +249,12 @@
 			isa = PBXGroup;
 			children = (
 				0C8010332214130300CB4AD2 /* wallpaperapp */,
+				0CFF312F2230525200E7B7C8 /* Watch */,
+				0CFF313E2230525400E7B7C8 /* Watch Extension */,
 				0C4A8888222FFD5C00965510 /* wallpapermac */,
 				0C8010322214130300CB4AD2 /* Products */,
-				43BFE3AEDD85FC25F318B5A2 /* Pods */,
-				E36B1FEA26F1482821DE00B2 /* Frameworks */,
+				59A37196F1932163FF8132DE /* Pods */,
+				3E2BB276ADD494279704814F /* Frameworks */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -175,6 +265,8 @@
 			children = (
 				0C8010312214130300CB4AD2 /* wallpaperapp.app */,
 				0C4A8887222FFD5C00965510 /* wallpapermac.app */,
+				0CFF312E2230525200E7B7C8 /* Watch.app */,
+				0CFF313A2230525400E7B7C8 /* Watch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -259,8 +351,8 @@
 			isa = PBXGroup;
 			children = (
 				0C8C31BE221FE005001EF5BC /* SettingsManager.swift */,
-				0C8010652214319500CB4AD2 /* APIManager.swift */,
-				0C2D36D8221452A1006901AA /* APIManager+Credentials.swift */,
+				0CAFC7552231229200E618C9 /* APIManager.swift */,
+				0CAFC757223122BF00E618C9 /* APIManager+Credentials.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -291,21 +383,49 @@
 			path = ThemedNavigationControllerView;
 			sourceTree = "<group>";
 		};
-		43BFE3AEDD85FC25F318B5A2 /* Pods */ = {
+		0CFF312F2230525200E7B7C8 /* Watch */ = {
 			isa = PBXGroup;
 			children = (
-				C41D526A99862C7F0EC235AC /* Pods-wallpaperapp.debug.xcconfig */,
-				92A344CE975F32BBAEC96DE3 /* Pods-wallpaperapp.release.xcconfig */,
+				0CFF31302230525200E7B7C8 /* Interface.storyboard */,
+				0CFF31332230525300E7B7C8 /* Assets.xcassets */,
+				0CFF31352230525300E7B7C8 /* Info.plist */,
 			);
-			name = Pods;
+			path = Watch;
 			sourceTree = "<group>";
 		};
-		E36B1FEA26F1482821DE00B2 /* Frameworks */ = {
+		0CFF313E2230525400E7B7C8 /* Watch Extension */ = {
 			isa = PBXGroup;
 			children = (
-				755D933F349575DFAF442398 /* Pods_wallpaperapp.framework */,
+				0CFF31412230525400E7B7C8 /* ExtensionDelegate.swift */,
+				0CAFC7482231128A00E618C9 /* ListInterfaceController.swift */,
+				0CAFC74D223116E800E618C9 /* ListRowController.swift */,
+				0CFF31432230525400E7B7C8 /* Assets.xcassets */,
+				0CFF31452230525400E7B7C8 /* Info.plist */,
+			);
+			path = "Watch Extension";
+			sourceTree = "<group>";
+		};
+		3E2BB276ADD494279704814F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7839E3FAADB580A786717175 /* Pods_wallpaperapp.framework */,
+				B744FAEBCE17409253A56BA8 /* Pods_Watch.framework */,
+				8D11F843782B904F7D2D646A /* Pods_Watch_Extension.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		59A37196F1932163FF8132DE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EA577344B7C31DE7D124E498 /* Pods-wallpaperapp.debug.xcconfig */,
+				C0790711BB6A91F43FF5EE69 /* Pods-wallpaperapp.marzipan.xcconfig */,
+				3BA208003FE5C1C35BC87398 /* Pods-wallpaperapp.release.xcconfig */,
+				C23F6B7F74007A3A5D77DC03 /* Pods-Watch Extension.debug.xcconfig */,
+				D11F33B0E867F65B92EB043B /* Pods-Watch Extension.marzipan.xcconfig */,
+				7AB5A3059BB0180801A01AE6 /* Pods-Watch Extension.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,20 +453,59 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0C8010432214130500CB4AD2 /* Build configuration list for PBXNativeTarget "wallpaperapp" */;
 			buildPhases = (
-				98FFD8124C11E47EA343CED6 /* [CP] Check Pods Manifest.lock */,
+				8C12D30623E57C8BD585EC4A /* [CP] Check Pods Manifest.lock */,
 				0C80102D2214130300CB4AD2 /* Sources */,
 				0C80102E2214130300CB4AD2 /* Frameworks */,
 				0C80102F2214130300CB4AD2 /* Resources */,
-				697CBA0F07942DA8EFFEB907 /* [CP] Embed Pods Frameworks */,
+				0CFF31522230525400E7B7C8 /* Embed Watch Content */,
+				8D7343341F058CA80C9AFEC7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0CFF31472230525400E7B7C8 /* PBXTargetDependency */,
 			);
 			name = wallpaperapp;
 			productName = wallpaperapp;
 			productReference = 0C8010312214130300CB4AD2 /* wallpaperapp.app */;
 			productType = "com.apple.product-type.application";
+		};
+		0CFF312D2230525200E7B7C8 /* Watch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0CFF31512230525400E7B7C8 /* Build configuration list for PBXNativeTarget "Watch" */;
+			buildPhases = (
+				0CFF312C2230525200E7B7C8 /* Resources */,
+				0CFF31502230525400E7B7C8 /* Embed App Extensions */,
+				6F2EDD3B6C20C24A39B15E12 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0CFF313D2230525400E7B7C8 /* PBXTargetDependency */,
+			);
+			name = Watch;
+			productName = Watch;
+			productReference = 0CFF312E2230525200E7B7C8 /* Watch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		0CFF31392230525400E7B7C8 /* Watch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0CFF314F2230525400E7B7C8 /* Build configuration list for PBXNativeTarget "Watch Extension" */;
+			buildPhases = (
+				F6292263D6B9561631FC7F6F /* [CP] Check Pods Manifest.lock */,
+				0CFF31362230525400E7B7C8 /* Sources */,
+				0CFF31372230525400E7B7C8 /* Frameworks */,
+				0CFF31382230525400E7B7C8 /* Resources */,
+				205643C69CCF9102F793E242 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Watch Extension";
+			productName = "Watch Extension";
+			productReference = 0CFF313A2230525400E7B7C8 /* Watch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -362,6 +521,12 @@
 						CreatedOnToolsVersion = 10.1;
 					};
 					0C8010302214130300CB4AD2 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					0CFF312D2230525200E7B7C8 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					0CFF31392230525400E7B7C8 = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
@@ -382,6 +547,8 @@
 			targets = (
 				0C8010302214130300CB4AD2 /* wallpaperapp */,
 				0C4A8886222FFD5C00965510 /* wallpapermac */,
+				0CFF312D2230525200E7B7C8 /* Watch */,
+				0CFF31392230525400E7B7C8 /* Watch Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -407,6 +574,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0CFF312C2230525200E7B7C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CFF31342230525300E7B7C8 /* Assets.xcassets in Resources */,
+				0CFF31322230525200E7B7C8 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0CFF31382230525400E7B7C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CAFC74A223115EF00E618C9 /* Assets.xcassets in Resources */,
+				0CFF31442230525400E7B7C8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -427,7 +612,7 @@
 			shellPath = /bin/sh;
 			shellScript = "if [ \"${CONFIGURATION}\" = \"Marzipan\" ]; then\ncd /Users/m/Documents/GitHub/wallpaper-ios/marzipanify\nrm -rf wallpapermac.app\nrm -rf Entitlements-*.plist\ncp -f -R ${BUILT_PRODUCTS_DIR}/wallpapermac.app /Users/m/Documents/GitHub/wallpaper-ios/marzipanify\n./marzipanify wallpapermac.app\nfi\n";
 		};
-		697CBA0F07942DA8EFFEB907 /* [CP] Embed Pods Frameworks */ = {
+		205643C69CCF9102F793E242 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -435,14 +620,62 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-wallpaperapp/Pods-wallpaperapp-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Watch Extension/Pods-Watch Extension-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire-watchOS/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic-watchOS/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift-watchOS/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Watch Extension/Pods-Watch Extension-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C12D30623E57C8BD585EC4A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-wallpaperapp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8D7343341F058CA80C9AFEC7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-wallpaperapp/Pods-wallpaperapp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire-iOS/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic-iOS/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift-iOS/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -460,10 +693,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-wallpaperapp/Pods-wallpaperapp-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-wallpaperapp/Pods-wallpaperapp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		98FFD8124C11E47EA343CED6 /* [CP] Check Pods Manifest.lock */ = {
+		F6292263D6B9561631FC7F6F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -478,7 +711,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-wallpaperapp-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Watch Extension-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -503,7 +736,6 @@
 			files = (
 				0C374B3022149BFE00127F80 /* WallpaperCategory.swift in Sources */,
 				0C80105B22141A5700CB4AD2 /* ImageListViewModel.swift in Sources */,
-				0C2D36D9221452A1006901AA /* APIManager+Credentials.swift in Sources */,
 				0C80105922141A5000CB4AD2 /* ImageListViewController.swift in Sources */,
 				0C80104C2214172C00CB4AD2 /* RootTabBarViewModel.swift in Sources */,
 				0C8010612214212600CB4AD2 /* SettingsViewController.swift in Sources */,
@@ -514,12 +746,13 @@
 				0CF44F2B22251D5D0049CC2A /* ThemedNavigationController.swift in Sources */,
 				0C374B2C2214955100127F80 /* CategoryCollectionCellViewModel.swift in Sources */,
 				0C374B2E221499EF00127F80 /* CategoriesCollectionViewLayout.swift in Sources */,
-				0C8010662214319500CB4AD2 /* APIManager.swift in Sources */,
 				0C2D36E122145C5D006901AA /* ImageTableCellView.swift in Sources */,
 				0C80104A2214172300CB4AD2 /* RootTabBarViewController.swift in Sources */,
 				0C8010632214213200CB4AD2 /* SettingsViewModel.swift in Sources */,
+				0CAFC758223122BF00E618C9 /* APIManager+Credentials.swift in Sources */,
 				0C374B2722148F4C00127F80 /* WallpaperImage.swift in Sources */,
 				0C8010352214130300CB4AD2 /* AppDelegate.swift in Sources */,
+				0CAFC7562231229200E618C9 /* APIManager.swift in Sources */,
 				0C80105D2214211100CB4AD2 /* CategoriesViewController.swift in Sources */,
 				0C80105F2214211B00CB4AD2 /* CategoriesViewModel.swift in Sources */,
 				0CA6C41D22159213000CE1F3 /* ImageDetailedViewController.swift in Sources */,
@@ -529,7 +762,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0CFF31362230525400E7B7C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CAFC7492231128A00E618C9 /* ListInterfaceController.swift in Sources */,
+				0CFF31422230525400E7B7C8 /* ExtensionDelegate.swift in Sources */,
+				0CAFC75A2231275A00E618C9 /* Codable.swift in Sources */,
+				0CAFC75B2231276100E618C9 /* APIManager+Credentials.swift in Sources */,
+				0CB6B15322314FF500AEF84F /* SettingsManager.swift in Sources */,
+				0CAFC7592231272900E618C9 /* APIManager.swift in Sources */,
+				0CAFC74E223116E800E618C9 /* ListRowController.swift in Sources */,
+				0CFF31542230535100E7B7C8 /* WallpaperImage.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0CFF313D2230525400E7B7C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0CFF31392230525400E7B7C8 /* Watch Extension */;
+			targetProxy = 0CFF313C2230525400E7B7C8 /* PBXContainerItemProxy */;
+		};
+		0CFF31472230525400E7B7C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0CFF312D2230525200E7B7C8 /* Watch */;
+			targetProxy = 0CFF31462230525400E7B7C8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0C4A888D222FFD5C00965510 /* Main.storyboard */ = {
@@ -565,6 +826,14 @@
 				0C4A889D2230014700965510 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		0CFF31302230525200E7B7C8 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0CFF31312230525200E7B7C8 /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -688,7 +957,7 @@
 		};
 		0C71387C222FD6B20095FB1A /* Marzipan */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C41D526A99862C7F0EC235AC /* Pods-wallpaperapp.debug.xcconfig */;
+			baseConfigurationReference = C0790711BB6A91F43FF5EE69 /* Pods-wallpaperapp.marzipan.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -826,7 +1095,7 @@
 		};
 		0C8010442214130500CB4AD2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C41D526A99862C7F0EC235AC /* Pods-wallpaperapp.debug.xcconfig */;
+			baseConfigurationReference = EA577344B7C31DE7D124E498 /* Pods-wallpaperapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -846,7 +1115,7 @@
 		};
 		0C8010452214130500CB4AD2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 92A344CE975F32BBAEC96DE3 /* Pods-wallpaperapp.release.xcconfig */;
+			baseConfigurationReference = 3BA208003FE5C1C35BC87398 /* Pods-wallpaperapp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -861,6 +1130,132 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0CFF31492230525400E7B7C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GCD2MCUEP4;
+				IBSC_MODULE = Watch_Extension;
+				INFOPLIST_FILE = Watch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.mskr.wallpaperapp.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.0;
+			};
+			name = Debug;
+		};
+		0CFF314A2230525400E7B7C8 /* Marzipan */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GCD2MCUEP4;
+				IBSC_MODULE = Watch_Extension;
+				INFOPLIST_FILE = Watch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.mskr.wallpaperapp.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.0;
+			};
+			name = Marzipan;
+		};
+		0CFF314B2230525400E7B7C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GCD2MCUEP4;
+				IBSC_MODULE = Watch_Extension;
+				INFOPLIST_FILE = Watch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.mskr.wallpaperapp.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.0;
+			};
+			name = Release;
+		};
+		0CFF314C2230525400E7B7C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C23F6B7F74007A3A5D77DC03 /* Pods-Watch Extension.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GCD2MCUEP4;
+				INFOPLIST_FILE = "Watch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.mskr.wallpaperapp.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.0;
+			};
+			name = Debug;
+		};
+		0CFF314D2230525400E7B7C8 /* Marzipan */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D11F33B0E867F65B92EB043B /* Pods-Watch Extension.marzipan.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GCD2MCUEP4;
+				INFOPLIST_FILE = "Watch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.mskr.wallpaperapp.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.0;
+			};
+			name = Marzipan;
+		};
+		0CFF314E2230525400E7B7C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AB5A3059BB0180801A01AE6 /* Pods-Watch Extension.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GCD2MCUEP4;
+				INFOPLIST_FILE = "Watch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.mskr.wallpaperapp.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.0;
 			};
 			name = Release;
 		};
@@ -893,6 +1288,26 @@
 				0C8010442214130500CB4AD2 /* Debug */,
 				0C71387C222FD6B20095FB1A /* Marzipan */,
 				0C8010452214130500CB4AD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0CFF314F2230525400E7B7C8 /* Build configuration list for PBXNativeTarget "Watch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0CFF314C2230525400E7B7C8 /* Debug */,
+				0CFF314D2230525400E7B7C8 /* Marzipan */,
+				0CFF314E2230525400E7B7C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0CFF31512230525400E7B7C8 /* Build configuration list for PBXNativeTarget "Watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0CFF31492230525400E7B7C8 /* Debug */,
+				0CFF314A2230525400E7B7C8 /* Marzipan */,
+				0CFF314B2230525400E7B7C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

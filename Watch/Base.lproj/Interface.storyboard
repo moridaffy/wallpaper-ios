@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14460.31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="C4f-mo-kfM">
+    <device id="watch44" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14460.16"/>
+    </dependencies>
+    <scenes>
+        <!--Featured-->
+        <scene sceneID="cRE-uZ-vWS">
+            <objects>
+                <controller identifier="List" title="Featured" id="C4f-mo-kfM" customClass="ListInterfaceController" customModule="Watch_Extension">
+                    <items>
+                        <table alignment="left" id="Sql-I6-gA6">
+                            <items>
+                                <tableRow identifier="ListRow" id="feE-mF-KoR" customClass="ListRowController" customModule="Watch_Extension">
+                                    <group key="rootItem" width="1" height="100" alignment="left" spacing="0.0" id="AMk-cC-GyR">
+                                        <items>
+                                            <imageView width="1" height="1" alignment="left" contentMode="scaleAspectFill" id="oXG-3G-Z0n"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="imageView" destination="oXG-3G-Z0n" id="aeY-1J-Vyg"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <label width="1" alignment="left" text="Label" textAlignment="center" id="8Jf-Cy-ZV8"/>
+                    </items>
+                    <connections>
+                        <outlet property="loadingLabel" destination="8Jf-Cy-ZV8" id="EwZ-Db-v1Y"/>
+                        <outlet property="table" destination="Sql-I6-gA6" id="Dd2-dz-hMp"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="14" y="118"/>
+        </scene>
+    </scenes>
+</document>

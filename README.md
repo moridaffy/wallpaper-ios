@@ -16,6 +16,7 @@
 <p align="center">
   <a href="#Features">Features</a> •
   <a href="#TODO">TODO</a> •
+  <a href="#Frameworks-used">Frameworks used</a> •
   <a href="#How-to-install">How to install</a> •
   <a href="#Developer">Developer</a>
 </p>
@@ -27,11 +28,20 @@
 * Preview as a wallpaper (overlay it with Springboard icons)
 * Application-wide dark mode
 * Full Russian and English localization
+* Companion app for your Apple Watch
 
 ## TODO
-- [ ] Marzipan support (run app on macOS)
+- [X] watchOS app
+- [ ] Remove deprecated ```Variable```
 - [ ] Add another image source (for example Unsplash)
+- [ ] Marzipan support (run app on macOS)
 - [ ] Upload to App Store (not 100% sure yet)
+
+## Frameworks used
+* <a href="https://github.com/ReactiveX/RxSwift">RxSwift</a> & <a href="https://github.com/RxSwiftCommunity/RxDataSources">RxDataSources</a> for data binding
+* <a href="https://github.com/Alamofire/Alamofire">Alamofire</a> for networking
+* <a href="https://github.com/onevcat/Kingfisher">Kingfisher</a> for asynchronous image loading and caching
+* <a href="https://github.com/SnapKit/SnapKit">SnapKit</a> for creating constraints
 
 ## How to install
 ### iOS App

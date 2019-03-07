@@ -2,7 +2,7 @@
 //  APIManager.swift
 //  wallpaperapp
 //
-//  Created by Максим Скрябин on 13/02/2019.
+//  Created by Максим Скрябин on 07/03/2019.
 //  Copyright © 2019 MSKR. All rights reserved.
 //
 
@@ -10,11 +10,17 @@ import Alamofire
 
 class APIManager {
   
+  private static let manager: SessionManager = {
+    let configuration = URLSessionConfiguration.default
+    configuration.requestCachePolicy = .reloadIgnoringLocalCacheData
+    return SessionManager(configuration: configuration)
+  }()
+  
   private struct URLs {
     static let baseUrl: String = "https://pixabay.com/api/?key="
   }
   
-  class var pixabayApiKey: String {
+  static var pixabayApiKey: String {
     // Your Pixabay API key should go here
     return hiddenApiKey
   }
@@ -28,6 +34,7 @@ class APIManager {
       urlString += "&editors_choice=true"
     }
     urlString += "&page=\(page)"
+    urlString += "&per_page=\(SettingsManager.shared.perPage.value)"
     
     guard let url = URL(string: urlString) else {
       result(nil, nil)
@@ -35,18 +42,25 @@ class APIManager {
     }
     
     // Making a request and returning error OR array of image urls
-    Alamofire.request(url).responseData { (response) in
-      if let responseData = response.data {
-        do {
-          let searchCodable = try JSONDecoder().decode(SearchCodable.self, from: responseData)
-          result(searchCodable, nil)
-        } catch let error {
-          result(nil, error)
-        }
+    manager.request(url).responseData { (response) in
+      if let data = response.data {
+        let searchCodable = try? JSONDecoder().decode(SearchCodable.self, from: data)
+        result(searchCodable, response.error)
       } else {
         result(nil, response.error)
       }
     }
   }
   
+  class func loadImage(urlString: String, result: @escaping (Data?) -> Void) {
+    guard let url = URL(string: urlString) else {
+      print("🔥 wrong url: \(urlString)")
+      result(nil)
+      return
+    }
+    
+    manager.request(url).responseData { (response) in
+      result(response.data)
+    }
+  }
 }

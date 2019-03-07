@@ -1,14 +1,21 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '11.0'
-
-target 'wallpaperapp' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
 use_frameworks!
 
-  # Pods for wallpaperapp
-pod 'RxSwift'
-pod 'RxDataSources'
-pod 'SnapKit'
-pod 'Alamofire'
-pod 'Kingfisher'
+def shared_pods
+  pod 'Alamofire'
+  pod 'RxSwift'
+end
+
+target 'wallpaperapp' do
+  platform :ios, '12.0'
+  shared_pods
+  
+  pod 'RxDataSources'
+  pod 'Kingfisher'
+  pod 'SnapKit'
+end
+
+target 'Watch Extension' do
+  platform :watchos, '5.0'
+  shared_pods
 end
