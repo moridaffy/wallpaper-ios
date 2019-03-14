@@ -29,9 +29,13 @@
 
 "Blur mode" = "Blur mode";
 "Theme mode" = "Theme mode";
+"Images per page" = "Images per page";
 "Cache size" = "Cache size";
-"Calculating" = "Calculating";
 "Clear cache" = "Clear cache";
+"Calculating" = "Calculating";
+"Loading" = "Loading";
+"Unable to read cache" = "Unable to read cache";
+"kb" = "kb";
 
 "Close" = "Close";
 "Save" = "Save";

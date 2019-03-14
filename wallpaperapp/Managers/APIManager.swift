@@ -22,7 +22,7 @@ class APIManager {
   
   static var pixabayApiKey: String {
     // Your Pixabay API key should go here
-    return hiddenApiKey
+    return "hiddenApiKey"
   }
   
   class func loadImages(search: String?, page: Int = 1, completion result: @escaping (SearchCodable?, Error?) -> Void) {

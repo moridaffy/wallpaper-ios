@@ -41,10 +41,8 @@
 		0CAFC74A223115EF00E618C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C80103B2214130500CB4AD2 /* Assets.xcassets */; };
 		0CAFC74E223116E800E618C9 /* ListRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAFC74D223116E800E618C9 /* ListRowController.swift */; };
 		0CAFC7562231229200E618C9 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAFC7552231229200E618C9 /* APIManager.swift */; };
-		0CAFC758223122BF00E618C9 /* APIManager+Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAFC757223122BF00E618C9 /* APIManager+Credentials.swift */; };
 		0CAFC7592231272900E618C9 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAFC7552231229200E618C9 /* APIManager.swift */; };
 		0CAFC75A2231275A00E618C9 /* Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2D36DB2214550E006901AA /* Codable.swift */; };
-		0CAFC75B2231276100E618C9 /* APIManager+Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAFC757223122BF00E618C9 /* APIManager+Credentials.swift */; };
 		0CB6B15322314FF500AEF84F /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8C31BE221FE005001EF5BC /* SettingsManager.swift */; };
 		0CF44F2B22251D5D0049CC2A /* ThemedNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF44F2A22251D5D0049CC2A /* ThemedNavigationController.swift */; };
 		0CFF31322230525200E7B7C8 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CFF31302230525200E7B7C8 /* Interface.storyboard */; };
@@ -141,7 +139,6 @@
 		0CAFC7482231128A00E618C9 /* ListInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInterfaceController.swift; sourceTree = "<group>"; };
 		0CAFC74D223116E800E618C9 /* ListRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowController.swift; sourceTree = "<group>"; };
 		0CAFC7552231229200E618C9 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
-		0CAFC757223122BF00E618C9 /* APIManager+Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIManager+Credentials.swift"; sourceTree = "<group>"; };
 		0CF44F2A22251D5D0049CC2A /* ThemedNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemedNavigationController.swift; sourceTree = "<group>"; };
 		0CFF312E2230525200E7B7C8 /* Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Watch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CFF31312230525200E7B7C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -352,7 +349,6 @@
 			children = (
 				0C8C31BE221FE005001EF5BC /* SettingsManager.swift */,
 				0CAFC7552231229200E618C9 /* APIManager.swift */,
-				0CAFC757223122BF00E618C9 /* APIManager+Credentials.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -749,7 +745,6 @@
 				0C2D36E122145C5D006901AA /* ImageTableCellView.swift in Sources */,
 				0C80104A2214172300CB4AD2 /* RootTabBarViewController.swift in Sources */,
 				0C8010632214213200CB4AD2 /* SettingsViewModel.swift in Sources */,
-				0CAFC758223122BF00E618C9 /* APIManager+Credentials.swift in Sources */,
 				0C374B2722148F4C00127F80 /* WallpaperImage.swift in Sources */,
 				0C8010352214130300CB4AD2 /* AppDelegate.swift in Sources */,
 				0CAFC7562231229200E618C9 /* APIManager.swift in Sources */,
@@ -769,7 +764,6 @@
 				0CAFC7492231128A00E618C9 /* ListInterfaceController.swift in Sources */,
 				0CFF31422230525400E7B7C8 /* ExtensionDelegate.swift in Sources */,
 				0CAFC75A2231275A00E618C9 /* Codable.swift in Sources */,
-				0CAFC75B2231276100E618C9 /* APIManager+Credentials.swift in Sources */,
 				0CB6B15322314FF500AEF84F /* SettingsManager.swift in Sources */,
 				0CAFC7592231272900E618C9 /* APIManager.swift in Sources */,
 				0CAFC74E223116E800E618C9 /* ListRowController.swift in Sources */,

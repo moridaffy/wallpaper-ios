@@ -36,7 +36,7 @@ class ListInterfaceController: WKInterfaceController {
   }
   
   private func setupLabel() {
-    loadingLabel.setText("Loading...")
+    loadingLabel.setText(NSLocalizedString("Loading", comment: "") + "...")
   }
   
   private func setupTable() {

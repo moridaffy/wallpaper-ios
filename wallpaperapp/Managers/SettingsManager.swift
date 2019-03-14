@@ -14,13 +14,15 @@ class SettingsManager {
     let manager = SettingsManager()
     manager.blurMode.value = BlurMode(rawValue: UserDefaults.standard.value(forKey: Keys.blurModeValue.rawValue) as? Int ?? 0) ?? .gaussian
     manager.themeMode.value = ThemeMode(rawValue: UserDefaults.standard.value(forKey: Keys.themeModeValue.rawValue) as? Int ?? 0) ?? .normal
+    manager.perPage.value = UserDefaults.standard.value(forKey: Keys.perPageValue.rawValue) as? Int ?? 20
     manager.bindData()
     return manager
   }()
   
   private enum Keys: String {
     case blurModeValue = "ru.mskr.wallpaperapp.blurModeValue"
-    case themeModeValue = "ru.mskr.wallpaperapp.ThemeModeValue"
+    case themeModeValue = "ru.mskr.wallpaperapp.themeModeValue"
+    case perPageValue = "ru.mskr.wallpaperapp.perPageValue"
   }
   
   private let disposeBag = DisposeBag()
@@ -42,6 +44,12 @@ class SettingsManager {
       .subscribe(onNext: { (value) in
         UserDefaults.standard.set((value ?? .normal).rawValue, forKey: Keys.themeModeValue.rawValue)
       }).disposed(by: disposeBag)
+    
+    perPage.asObservable()
+      .skip(1)
+      .subscribe { (value) in
+        UserDefaults.standard.set(value.element ?? 20, forKey: Keys.perPageValue.rawValue)
+      }.disposed(by: disposeBag)
   }
 }
 

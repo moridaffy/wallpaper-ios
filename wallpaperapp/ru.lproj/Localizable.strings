@@ -29,9 +29,13 @@
 
 "Blur mode" = "Режим размытия";
 "Theme mode" = "Тема";
+"Images per page" = "Заставок на странице";
 "Cache size" = "Размер кеша";
-"Calculating" = "Подсчет";
 "Clear cache" = "Очистить кеш";
+"Calculating" = "Подсчет";
+"Loading" = "Загрузка";
+"Unable to read cache" = "Не удалось прочитать кеш";
+"kb" = "кб";
 
 "Close" = "Закрыть";
 "Save" = "Сохранить";
