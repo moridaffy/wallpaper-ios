@@ -27,7 +27,14 @@ class SettingsManager {
   
   private let disposeBag = DisposeBag()
   
-  let demoMode: Bool = true
+  var demoMode: Bool {
+    #if DEBUG
+    return true
+    #else
+    return false
+    #endif
+  }
+  
   let perPage = Variable(20)
   let blurMode = Variable(nil as BlurMode?)
   let themeMode = Variable(nil as ThemeMode?)

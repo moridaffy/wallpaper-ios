@@ -11,9 +11,11 @@ import UIKit
 class WallpaperCategory {
   
   let type: CategoryType
+  var searchString: String?
   
-  init(type: CategoryType) {
+  init(type: CategoryType, searchString: String? = nil) {
     self.type = type
+    self.searchString = searchString
   }
   
 }
@@ -29,8 +31,9 @@ extension WallpaperCategory {
     case abstract = "abstract"
     case music = "music"
     case sport = "sport"
+    case search = "search"
     
-    var image: UIImage {
+    var image: UIImage? {
       switch self {
       case .car:
         return #imageLiteral(resourceName: "category_car")
@@ -50,6 +53,8 @@ extension WallpaperCategory {
         return #imageLiteral(resourceName: "category_music")
       case .sport:
         return #imageLiteral(resourceName: "category_sport")
+      case .search:
+        return nil
       }
     }
     
@@ -73,6 +78,8 @@ extension WallpaperCategory {
         return NSLocalizedString("Music", comment: "")
       case .sport:
         return NSLocalizedString("Sport", comment: "")
+      case .search:
+        return NSLocalizedString("Search", comment: "")
       }
     }
   }

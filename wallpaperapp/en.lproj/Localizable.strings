@@ -19,6 +19,9 @@
 "Fashion" = "Fashion";
 "Sport" = "Sport";
 "Music" = "Music";
+"Search" = "Search";
+"Please, enter search request and hit \"Go\" button"  = "Please, enter search request and hit \"Go\" button";
+"Go" = "Go";
 
 "Gaussian" = "Gaussian";
 "Disc" = "Disc";
@@ -39,4 +42,5 @@
 
 "Close" = "Close";
 "Save" = "Save";
+"Cancel" = "Cancel";
 "Unknown error" = "Unknown error";

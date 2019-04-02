@@ -37,6 +37,11 @@ class CategoriesViewController: UIViewController {
     collectionView.backgroundColor = UIColor.white
     view.addSubview(collectionView)
     self.collectionView = collectionView
+    
+    let searchButton = UIButton()
+    searchButton.setImage(#imageLiteral(resourceName: "icon_search").withRenderingMode(.alwaysTemplate), for: .normal)
+    searchButton.addTarget(self, action: #selector(searchButtonTapped), for: .touchUpInside)
+    navigationItem.rightBarButtonItem = UIBarButtonItem(customView: searchButton)
   }
   
   private func setupCollectionView() {
@@ -49,6 +54,31 @@ class CategoriesViewController: UIViewController {
     collectionView.snp.makeConstraints { (make) in
       make.center.size.equalTo(view)
     }
+  }
+}
+
+extension CategoriesViewController {
+  @objc private func searchButtonTapped() {
+    let alert = UIAlertController(title: NSLocalizedString("Search", comment: ""),
+                                  message: NSLocalizedString("Please, enter search request and hit \"Go\" button", comment: ""),
+                                  preferredStyle: .alert)
+    alert.addTextField { (textField) in
+      textField.placeholder = NSLocalizedString("Cars", comment: "")
+      textField.keyboardType = .asciiCapable
+    }
+    
+    alert.addAction(UIAlertAction(title: NSLocalizedString("Go", comment: ""), style: .default) { (_) in
+      guard let searchText = alert.textFields?.first?.text, !searchText.isEmpty else { return }
+      let imageListViewController = ImageListViewController()
+      let searchCategory =  WallpaperCategory(type: .search, searchString: searchText)
+      imageListViewController.setup(title: NSLocalizedString("Search", comment: ""), model: ImageListViewModel(category: searchCategory))
+      self.navigationController?.pushViewController(imageListViewController, animated: true)
+    })
+    
+    alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel) { (_) in
+      alert.dismiss(animated: true, completion: nil)
+    })
+    present(alert, animated: true, completion: nil)
   }
 }
 

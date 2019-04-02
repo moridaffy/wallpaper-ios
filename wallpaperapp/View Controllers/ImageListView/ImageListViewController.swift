@@ -51,6 +51,13 @@ class ImageListViewController: UIViewController {
     let tableView = UITableView(frame: view.frame, style: .plain)
     view.addSubview(tableView)
     self.tableView = tableView
+    
+    if model.category == nil {
+      let searchButton = UIButton()
+      searchButton.setImage(#imageLiteral(resourceName: "icon_search").withRenderingMode(.alwaysTemplate), for: .normal)
+      searchButton.addTarget(self, action: #selector(searchButtonTapped), for: .touchUpInside)
+      navigationItem.rightBarButtonItem = UIBarButtonItem(customView: searchButton)
+    }
   }
   
   private func setupConstraints() {
@@ -95,7 +102,7 @@ class ImageListViewController: UIViewController {
 
 extension ImageListViewController {
   @objc private func pullToRefresh() {
-    APIManager.loadImages(search: model.category?.type.rawValue) { [weak self] (response, error) in
+    APIManager.loadImages(search: model.category?.searchString ?? model.category?.type.rawValue) { [weak self] (response, error) in
       self?.refresher?.endRefreshing()
       if let response = response {
         self?.model.setupContent(response: response, append: false)
@@ -103,6 +110,29 @@ extension ImageListViewController {
         print("🔥 Failed to load images: \(error?.localizedDescription ?? "unknown error")")
       }
     }
+  }
+  
+  @objc private func searchButtonTapped() {
+    let alert = UIAlertController(title: NSLocalizedString("Search", comment: ""),
+                                  message: NSLocalizedString("Please, enter search request and hit \"Go\" button", comment: ""),
+                                  preferredStyle: .alert)
+    alert.addTextField { (textField) in
+      textField.placeholder = NSLocalizedString("Cars", comment: "")
+      textField.keyboardType = .asciiCapable
+    }
+    
+    alert.addAction(UIAlertAction(title: NSLocalizedString("Go", comment: ""), style: .default) { (_) in
+      guard let searchText = alert.textFields?.first?.text, !searchText.isEmpty else { return }
+      let imageListViewController = ImageListViewController()
+      let searchCategory =  WallpaperCategory(type: .search, searchString: searchText)
+      imageListViewController.setup(title: NSLocalizedString("Search", comment: ""), model: ImageListViewModel(category: searchCategory))
+      self.navigationController?.pushViewController(imageListViewController, animated: true)
+    })
+    
+    alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel) { (_) in
+      alert.dismiss(animated: true, completion: nil)
+    })
+    present(alert, animated: true, completion: nil)
   }
 }
 

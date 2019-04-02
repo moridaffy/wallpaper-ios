@@ -32,6 +32,7 @@
 
 ## TODO
 - [X] watchOS app
+- [X] Search through wallpapers
 - [ ] Remove deprecated ```Variable```
 - [ ] Add another image source (for example Unsplash)
 - [ ] Marzipan support (run app on macOS)
