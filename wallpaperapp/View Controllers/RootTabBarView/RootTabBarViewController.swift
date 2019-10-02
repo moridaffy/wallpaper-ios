@@ -42,13 +42,13 @@ class RootTabBarViewController: UITabBarController {
   
   private func bindData() {
     SettingsManager.shared.themeMode.asObservable()
-      .subscribe { [weak self] (event) in
+      .subscribe { [tabBar] event in
         if let themeMode = event.element {
           switch themeMode ?? .normal {
           case .normal:
-            self?.tabBar.barTintColor = UIColor.white
+            tabBar.barTintColor = .white
           case .dark:
-            self?.tabBar.barTintColor = UIColor.black
+            tabBar.barTintColor = .black
           }
         }
       }.disposed(by: disposeBag)
