@@ -175,12 +175,12 @@ class SettingsViewController: UIViewController {
   
   private func loadCacheSize() {
     cacheSizeLabel.text = NSLocalizedString("Cache size", comment: "") + ": " + NSLocalizedString("Calculating", comment: "") + "..."
-    KingfisherManager.shared.cache.calculateDiskStorageSize { [weak self] (result) in
-      do {
-        let value = try result.get()
-        self?.cacheSizeLabel.text = NSLocalizedString("Cache size", comment: "") + ": \(value) " + NSLocalizedString("kb", comment: "")
-      } catch let error {
-        self?.cacheSizeLabel.text = NSLocalizedString("Unable to read cache", comment: "") + ": \(error.localizedDescription)"
+    KingfisherManager.shared.cache.calculateDiskStorageSize { result in
+      switch result {
+      case .success(let value):
+        self.cacheSizeLabel.text = NSLocalizedString("Cache size", comment: "") + ": \(value) " + NSLocalizedString("kb", comment: "")
+      case .failure(let error):
+        self.cacheSizeLabel.text = NSLocalizedString("Unable to read cache", comment: "") + ": \(error.localizedDescription)"
       }
     }
   }

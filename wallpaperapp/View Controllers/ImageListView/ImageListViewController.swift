@@ -102,10 +102,11 @@ class ImageListViewController: UIViewController {
 
 extension ImageListViewController {
   @objc private func pullToRefresh() {
-    APIManager.loadImages(search: model.category?.searchString ?? model.category?.type.rawValue) { [weak self] (response, error) in
-      self?.refresher?.endRefreshing()
+    let search = model.category?.searchString ?? model.category?.type.rawValue
+    APIManager.loadImages(search: search) { response, error in
+      self.refresher?.endRefreshing()
       if let response = response {
-        self?.model.setupContent(response: response, append: false)
+        self.model.setupContent(response: response, append: false)
       } else {
         print("🔥 Failed to load images: \(error?.localizedDescription ?? "unknown error")")
       }
@@ -146,14 +147,14 @@ extension ImageListViewController: UITableViewDelegate {
       let indicator = UIActivityIndicatorView()
       indicator.startAnimating()
       tableView.tableFooterView = indicator
-      APIManager.loadImages(search: model.category?.type.rawValue, page: model.page + 1) { [weak self] (response, error) in
-        self?.tableView.tableFooterView = nil
-        if let response = response {
-          self?.model.page = (self?.model.page ?? 0) + 1
-          self?.model.setupContent(response: response, append: true)
-        } else {
+      APIManager.loadImages(search: model.category?.type.rawValue, page: model.page + 1) { (response, error) in
+        self.tableView.tableFooterView = nil
+        guard let response = response else {
           print("🔥 Failed to load images: \(error?.localizedDescription ?? "unknown error")")
+          return
         }
+        self.model.page += 1
+        self.model.setupContent(response: response, append: true)
       }
     }
   }

@@ -155,9 +155,12 @@ class ImageDetailedViewController: UIViewController {
   
   private func setupContent() {
     iconsImageView.image = UIDevice.current.type.iconsImage
-    imageView.kf.setImage(with: URL(string: model.image.fullUrl)) { [weak self] result in
-      if let image = result.value?.image {
-        self?.model.image.image = image
+    imageView.kf.setImage(with: URL(string: model.image.fullUrl)) { [model] result in
+      switch result {
+      case .success(let value):
+        model?.image.image = value.image
+      case .failure(let error):
+        print("Job failed: \(error.localizedDescription)")
       }
     }
   }
